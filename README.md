@@ -1,2 +1,429 @@
-# GO-Studio
-GO Studio web site 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GO Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#070A12;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* BACKGROUND EFFECT */
+.bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background:
+radial-gradient(circle at 20% 20%, #2563eb55, transparent 35%),
+radial-gradient(circle at 80% 70%, #00e67633, transparent 40%),
+#070A12;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:10;
+background:rgba(0,0,0,.3);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+}
+
+.logo span{
+background:linear-gradient(90deg,#00e676,#00b0ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+color:#ccc;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:white;
+}
+
+/* HERO */
+.hero{
+min-height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#00e676,#2563eb);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:18px;
+color:#cbd5e1;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:#2563eb;
+color:white;
+}
+
+.secondary{
+border:1px solid rgba(255,255,255,.2);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* MARQUEE */
+.marquee{
+overflow:hidden;
+white-space:nowrap;
+padding:18px 0;
+background:rgba(255,255,255,.03);
+border-top:1px solid rgba(255,255,255,.05);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.marquee div{
+display:inline-block;
+animation:scroll 18s linear infinite;
+font-weight:600;
+color:#60a5fa;
+}
+
+.marquee span{
+margin:0 40px;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* SECTION */
+.section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:15px;
+}
+
+.subtitle{
+text-align:center;
+color:#94a3b8;
+margin-bottom:60px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+padding:25px;
+backdrop-filter:blur(12px);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#2563eb55;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#cbd5e1;
+font-size:14px;
+}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+margin-top:50px;
+}
+
+.stat{
+text-align:center;
+padding:25px;
+background:rgba(255,255,255,.03);
+border-radius:18px;
+}
+
+.stat h2{
+font-size:38px;
+color:#00e676;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+padding:80px 10%;
+}
+
+.cta-box{
+background:linear-gradient(135deg,#2563eb33,#00e67622);
+padding:50px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.cta h2{
+font-size:34px;
+margin-bottom:15px;
+}
+
+.cta p{
+color:#cbd5e1;
+margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+padding:50px 10%;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.05);
+color:#94a3b8;
+}
+
+.links{
+margin-top:20px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.links a{
+padding:12px 20px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.links a:hover{
+background:#2563eb;
+transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+.hero h1{font-size:38px;}
+nav{padding:20px;}
+.section{padding:80px 20px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- NAV -->
+<nav>
+<div class="logo"><span>GO</span> Studio </div>
+<div>
+<a href="#projects">Projets</a>
+<a href="#stats">Stats</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+
+<h1>Construire le futur avec <span>innovation</span></h1>
+
+<p>
+GO Studio développe des applications Android, des systèmes IA,
+et des solutions numériques modernes pour transformer les idées en réalité.
+</p>
+
+<div class="buttons">
+<a href="#projects" class="btn primary">Découvrir</a>
+<a href="#contact" class="btn secondary">Nous contacter</a>
+</div>
+
+</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+<div>
+<span>🚀 MotivPlus</span>
+<span>🤖 Lunaris AI</span>
+<span>💬 AI Chats</span>
+<span>📚 Sketch Éduc</span>
+<span>🍒 NutriApp</span>
+<span>📱 Status Saver</span>
+<span>🚀 MotivPlus</span>
+<span>🤖 Lunaris AI</span>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+
+<h2 class="title">Nos Projets</h2>
+<p class="subtitle">Des solutions modernes, rapides et intelligentes.</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🚀 MotivPlus</h3>
+<p>Plateforme sociale de motivation et partage positif.</p>
+</div>
+
+<div class="card">
+<h3>🤖 Lunaris AI</h3>
+<p>Assistant intelligent basé sur l'intelligence artificielle.</p>
+</div>
+
+<div class="card">
+<h3>💬 AI Chats</h3>
+<p>Hub multi-AI pour conversations intelligentes.</p>
+</div>
+
+<div class="card">
+<h3>📚 Sketch Éduc</h3>
+<p>Apprentissage Sketchware Pro et développement Android.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+<section class="section" id="stats">
+
+<h2 class="title">Statistiques</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>10+</h2>
+<p>Applications</p>
+</div>
+
+<div class="stat">
+<h2>5+</h2>
+<p>Projets IA</p>
+</div>
+
+<div class="stat">
+<h2>1000+</h2>
+<p>Utilisateurs</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Innovation</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+<div class="cta-box">
+
+<h2>Travaillons ensemble</h2>
+<p>Contactez GO Studio pour créer des projets innovants.</p>
+
+<a href="https://www.t.me/GoStudioLLC" class="btn primary">Telegram</a>
+<a href="mailto:gollcofficiel@gmail.com" class="btn secondary">Email</a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<p>© 2026 GO Studio — Tous droits réservés</p>
+
+<div class="links">
+
+<a href="https://github.com" target="_blank">GitHub</a>
+<a href="https://www.t.me/GoStudioLLC" target="_blank">Telegram</a>
+<a href="mailto:gollcofficiel@gmail.com">Contact</a>
+
+</div>
+
+</footer>
+
+</body>
+</html>
