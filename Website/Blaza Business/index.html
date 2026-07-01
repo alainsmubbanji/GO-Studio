@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blaza Business Multiservices</title>
+
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+
+<style>
+
+/* RESET FULL SCREEN */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  width:100%;
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:system-ui, Arial;
+  background: radial-gradient(circle at top, #1a237e, #0b0f19);
+  color:white;
+}
+
+/* ICONS */
+.icon{
+  font-family:'Material Symbols Rounded';
+  font-size:22px;
+}
+
+/* TOPBAR */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 16px;
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(18px);
+  z-index:10;
+}
+
+/* DRAWER */
+.drawer{
+  position:fixed;
+  top:0;
+  left:-280px;
+  width:260px;
+  height:100%;
+  background:rgba(20,20,30,0.96);
+  padding:20px;
+  transition:0.3s;
+  z-index:100;
+  border-right:1px solid rgba(255,255,255,0.1);
+}
+
+.drawer.open{left:0}
+
+.drawer h2{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:15px;
+}
+
+.drawer a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  margin:8px 0;
+  border-radius:14px;
+  text-decoration:none;
+  color:white;
+}
+
+.drawer a:hover{
+  background:rgba(138,180,248,0.2);
+}
+
+/* OVERLAY */
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+  display:none;
+  z-index:50;
+}
+
+.overlay.show{display:block}
+
+/* HERO */
+.hero{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:30px;
+  background:linear-gradient(90deg,#8ab4f8,#00e5ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:10px;
+  opacity:0.8;
+  max-width:700px;
+  margin-inline:auto;
+}
+
+/* SECTIONS */
+section{
+  padding:40px 20px;
+  text-align:center;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:22px;
+  backdrop-filter:blur(15px);
+  max-width:700px;
+  margin:auto;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.grid .card{
+  max-width:none;
+}
+
+/* CONTACT BUTTON */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:15px;
+  padding:12px 16px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#8ab4f8,#00e5ff);
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* WHATSAPP FLOAT */
+.fab{
+  position:fixed;
+  bottom:80px;
+  right:15px;
+  width:55px;
+  height:55px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  z-index:999;
+  text-decoration:none;
+  color:white;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  opacity:0.7;
+  background:rgba(0,0,0,0.3);
+}
+
+.about-section{
+    padding:70px 20px;
+}
+
+.about-card{
+    max-width:1100px;
+    margin:auto;
+    padding:35px;
+    border-radius:28px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.about-icon{
+    font-size:64px;
+    color:#8ab4f8;
+}
+
+.about-card h2{
+    margin:15px 0;
+    font-size:34px;
+}
+
+.intro{
+    font-size:17px;
+    line-height:1.8;
+    opacity:.9;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+    margin-top:35px;
+}
+
+.info-card{
+    padding:24px;
+    border-radius:22px;
+    background:rgba(255,255,255,.05);
+}
+
+.info-card span{
+    font-size:42px;
+    color:#8ab4f8;
+}
+
+.info-card h3{
+    margin:15px 0 10px;
+}
+
+.activity-grid{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:18px;
+}
+
+.activity{
+    padding:22px;
+    border-radius:18px;
+    background:rgba(255,255,255,.05);
+    text-align:center;
+}
+
+.activity span{
+    font-size:42px;
+    color:#00E5FF;
+}
+
+.activity p{
+    margin-top:10px;
+    font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <h2><span class="icon">store</span>Blaza Business</h2>
+
+  <a href="#about" onclick="toggleDrawer()"><span class="icon">home</span>Accueil</a>
+  <a href="#about" onclick="toggleDrawer()"><span class="icon">domain</span>Maison</a>
+  <a href="#services" onclick="toggleDrawer()"><span class="icon">business</span>Activités</a>
+  <a href="#contact" onclick="toggleDrawer()"><span class="icon">call</span>Contact</a>
+
+  <a target="_blank"
+     href="https://wa.me/243243849730042?text=Bonjour%20Blaza%20Business">
+     <span class="icon">chat</span>WhatsApp
+  </a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="icon" onclick="toggleDrawer()">menu</span>
+  <strong>Blaza Business Multiservices</strong>
+  <span class="icon">apartment</span>
+</div>
+
+
+<!-- ===========================
+     PRÉSENTATION DE L'ENTREPRISE
+=========================== -->
+
+<section id="about" class="about-section">
+
+    <div class="about-card">
+
+        <span class="material-symbols-rounded about-icon">
+            apartment
+        </span>
+
+        <h2>Bienvenue chez Blaza Business Multiservices</h2>
+
+        <p class="intro">
+            <strong>Blaza Business Multiservices</strong> est une maison de commerce moderne
+            spécialisée dans la vente de téléphones, d'accessoires, d'équipements
+            informatiques et d'outils professionnels. Nous nous engageons à offrir
+            des produits de qualité, un service fiable et un accompagnement personnalisé
+            afin de répondre aux besoins des particuliers comme des professionnels.
+        </p>
+
+        <div class="about-grid">
+
+            <div class="info-card">
+                <span class="material-symbols-rounded">flag</span>
+                <h3>Notre Mission</h3>
+                <p>
+                    Fournir des produits de qualité et des solutions commerciales
+                    adaptées aux besoins de nos clients.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <span class="material-symbols-rounded">visibility</span>
+                <h3>Notre Vision</h3>
+                <p>
+                    Devenir une référence dans le commerce des produits
+                    technologiques et des équipements professionnels à Lubumbashi et en RDC.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <span class="material-symbols-rounded">favorite</span>
+                <h3>Nos Valeurs</h3>
+                <p>
+                    Confiance, qualité, innovation,
+                    professionnalisme et satisfaction client.
+                </p>
+            </div>
+
+        </div>
+
+        <h3 style="margin-top:35px;">
+            Nos principaux domaines d'activité
+        </h3>
+
+        <div class="activity-grid">
+
+            <div class="activity">
+                <span class="material-symbols-rounded">smartphone</span>
+                <p>Téléphones</p>
+            </div>
+
+            <div class="activity">
+                <span class="material-symbols-rounded">headphones</span>
+                <p>Accessoires</p>
+            </div>
+
+            <div class="activity">
+                <span class="material-symbols-rounded">computer</span>
+                <p>Informatique</p>
+            </div>
+
+            <div class="activity">
+                <span class="material-symbols-rounded">construction</span>
+                <p>Outils professionnels</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>⚙️ Nos Activités</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <span class="icon">smartphone</span>
+      <h3>Téléphones</h3>
+      <p>Smartphones modernes et fiables.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">headphones</span>
+      <h3>Accessoires</h3>
+      <p>Chargeurs, écouteurs et gadgets.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">construction</span>
+      <h3>Outils Pro</h3>
+      <p>Équipements de travail et production.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>📞 Contact</h2>
+
+  <div class="card">
+    <p><span class="icon">location_on</span> Lubumbashi, RDC</p>
+    <p><span class="icon">call</span> +243 849 730 042</p>
+
+    <a class="btn"
+       target="_blank"
+        href="https://wa.me/243243849730042?text=Bonjour%20Blaza%20Business">
+      <span class="icon">chat</span>WhatsApp Business
+    </a>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a class="fab"
+   target="_blank"
+   href="https://wa.me/243243849730042?text=Bonjour%20Blaza%20Business">
+   <span class="icon">chat</span>
+</a>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Blaza Business Multiservices — Maison de commerce officielle.
+  <h2>Website by GO Studio</h2>
+<p>Créer • Innover • Inspirer</p>
+
+</footer>
+
+<script>
+function toggleDrawer(){
+  document.getElementById("drawer").classList.toggle("open");
+  document.getElementById("overlay").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
+ᅠ
