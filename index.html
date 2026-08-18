@@ -3,444 +3,3191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GO Studio LLC</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#070A12">
+
+<meta name="description"
+content="GO Studio LLC — Studio technologique indépendant spécialisé dans les applications Android, l'intelligence artificielle et les solutions numériques modernes.">
+
+<meta name="author" content="GO Studio LLC">
+
+<title>GO Studio LLC — Building Ideas. Creating Technology.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+    --bg:#070A12;
+    --bg-soft:#0B1020;
+    --surface:rgba(255,255,255,.045);
+    --surface-hover:rgba(255,255,255,.075);
+
+    --text:#FFFFFF;
+    --text-soft:#CBD5E1;
+    --text-muted:#94A3B8;
+
+    --blue:#2563EB;
+    --blue-light:#60A5FA;
+
+    --green:#00E676;
+    --green-light:#34D399;
+
+    --border:rgba(255,255,255,.09);
+
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:26px;
+    --radius-xl:34px;
+
+    --max-width:1180px;
+
+    --shadow:
+        0 20px 70px rgba(0,0,0,.35);
+
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#070A12;
-color:#fff;
-overflow-x:hidden;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:'Inter',sans-serif;
+
+    line-height:1.6;
+
+    overflow-x:hidden;
 }
 
-/* BACKGROUND EFFECT */
-.bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-background:
-radial-gradient(circle at 20% 20%, #2563eb55, transparent 35%),
-radial-gradient(circle at 80% 70%, #00e67633, transparent 40%),
-#070A12;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-z-index:10;
-background:rgba(0,0,0,.3);
-border-bottom:1px solid rgba(255,255,255,.05);
+button{
+    font-family:inherit;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-5;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(37,99,235,.22),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(0,230,118,.12),
+            transparent 32%
+        ),
+
+        var(--bg);
+}
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    left:-250px;
+    top:35%;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.08);
+
+    filter:blur(80px);
+}
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    right:-200px;
+    top:5%;
+
+    border-radius:50%;
+
+    background:rgba(0,230,118,.06);
+
+    filter:blur(80px);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+
+    width:min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
+    margin:auto;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    background:rgba(7,10,18,.72);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.navbar{
+
+    height:74px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    letter-spacing:-.5px;
+}
+
+.logo-mark{
+
+    width:34px;
+    height:34px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--blue)
+        );
+
+    color:#fff;
+
+    font-size:14px;
+
+    box-shadow:
+        0 8px 25px rgba(37,99,235,.25);
 }
 
 .logo span{
-background:linear-gradient(90deg,#00e676,#00b0ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--blue-light)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
 }
 
-nav a{
-color:#ccc;
-text-decoration:none;
-margin-left:20px;
-transition:.3s;
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
 }
 
-nav a:hover{
-color:white;
+.nav-links a{
+
+    position:relative;
+
+    color:var(--text-muted);
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.25s;
 }
 
-/* HERO */
+.nav-links a:hover{
+
+    color:#fff;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        var(--green),
+        var(--blue)
+    );
+
+    transition:.25s;
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+}
+
+.nav-button{
+
+    padding:10px 17px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid var(--border);
+
+    color:#fff !important;
+
+    transition:.25s;
+}
+
+.nav-button:hover{
+
+    background:var(--blue);
+
+    transform:translateY(-2px);
+}
+
+.menu-button{
+
+    display:none;
+
+    width:42px;
+    height:42px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    background:var(--surface);
+
+    color:#fff;
+
+    font-size:21px;
+
+    cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero{
-min-height:90vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px 20px;
+
+    min-height:
+        calc(100vh - 74px);
+
+    display:flex;
+
+    align-items:center;
+
+    padding:
+        90px 0
+        110px;
+
+    position:relative;
 }
 
 .hero-content{
-max-width:900px;
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.045);
+
+    border:1px solid var(--border);
+
+    color:var(--text-soft);
+
+    font-size:13px;
+
+    margin-bottom:28px;
+
+    animation:fadeUp .8s ease both;
+}
+
+.badge-dot{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 14px var(--green);
 }
 
 .hero h1{
-font-size:60px;
-line-height:1.1;
-margin-bottom:20px;
+
+    font-size:
+        clamp(42px,7vw,78px);
+
+    line-height:1.02;
+
+    letter-spacing:-4px;
+
+    font-weight:800;
+
+    margin-bottom:28px;
+
+    animation:fadeUp .9s ease both;
 }
 
-.hero h1 span{
-background:linear-gradient(90deg,#00e676,#2563eb);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.gradient-text{
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            #60A5FA,
+            var(--blue)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
 }
 
-.hero p{
-font-size:18px;
-color:#cbd5e1;
-margin-bottom:30px;
+.hero-description{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:var(--text-soft);
+
+    font-size:
+        clamp(16px,2vw,19px);
+
+    animation:fadeUp 1s ease both;
 }
 
-.buttons{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
+.hero-actions{
+
+    margin-top:36px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:13px;
+
+    animation:fadeUp 1.1s ease both;
 }
 
 .btn{
-padding:14px 28px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
 
-.primary{
-background:#2563eb;
-color:white;
-}
+    display:inline-flex;
 
-.secondary{
-border:1px solid rgba(255,255,255,.2);
-color:white;
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    min-height:50px;
+
+    padding:
+        0 23px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        background .25s;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+
+    transform:translateY(-3px);
 }
 
-/* MARQUEE */
+.btn-primary{
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            #3478ff
+        );
+
+    box-shadow:
+        0 12px 35px rgba(37,99,235,.25);
+}
+
+.btn-primary:hover{
+
+    box-shadow:
+        0 16px 45px rgba(37,99,235,.38);
+}
+
+.btn-secondary{
+
+    background:rgba(255,255,255,.045);
+
+    border:1px solid var(--border);
+
+    color:#fff;
+}
+
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,.08);
+}
+
+/* =========================================================
+   HERO ORBIT
+========================================================= */
+
+.hero-decoration{
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(96,165,250,.06);
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+.hero-decoration::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:70px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(0,230,118,.05);
+}
+
+.hero-decoration::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
+
+    top:40px;
+    left:50%;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 25px var(--green);
+}
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
 .marquee{
-overflow:hidden;
-white-space:nowrap;
-padding:18px 0;
-background:rgba(255,255,255,.03);
-border-top:1px solid rgba(255,255,255,.05);
-border-bottom:1px solid rgba(255,255,255,.05);
+
+    overflow:hidden;
+
+    border-top:
+        1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
+
+    background:
+        rgba(255,255,255,.025);
+
+    padding:18px 0;
 }
 
-.marquee div{
-display:inline-block;
-animation:scroll 18s linear infinite;
-font-weight:600;
-color:#60a5fa;
+.marquee-track{
+
+    width:max-content;
+
+    display:flex;
+
+    gap:55px;
+
+    animation:
+        marquee 30s linear infinite;
 }
 
-.marquee span{
-margin:0 40px;
+.marquee-item{
+
+    color:#8EB9FF;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    white-space:nowrap;
 }
 
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
+@keyframes marquee{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
 }
 
-/* SECTION */
+/* =========================================================
+   SECTION
+========================================================= */
+
 .section{
-padding:100px 10%;
+
+    padding:110px 0;
 }
 
-.title{
-text-align:center;
-font-size:40px;
-margin-bottom:15px;
+.section-header{
+
+    max-width:700px;
+
+    margin:
+        0 auto
+        55px;
+
+    text-align:center;
 }
 
-.subtitle{
-text-align:center;
-color:#94a3b8;
-margin-bottom:60px;
+.eyebrow{
+
+    display:inline-block;
+
+    color:var(--green);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
 }
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+.section-title{
+
+    font-size:
+        clamp(32px,5vw,46px);
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:16px;
 }
 
-.card{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.08);
-border-radius:22px;
-padding:25px;
-backdrop-filter:blur(12px);
-transition:.3s;
+.section-description{
+
+    color:var(--text-muted);
+
+    font-size:15px;
 }
 
-.card:hover{
-transform:translateY(-8px);
-border-color:#2563eb55;
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
 }
 
-.card h3{
-margin-bottom:10px;
+.project-card{
+
+    position:relative;
+
+    min-height:280px;
+
+    padding:27px;
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid var(--border);
+
+    overflow:hidden;
+
+    transition:
+        transform .3s,
+        border-color .3s,
+        background .3s;
 }
 
-.card p{
-color:#cbd5e1;
-font-size:14px;
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    right:-70px;
+    top:-70px;
+
+    border-radius:50%;
+
+    background:
+        rgba(37,99,235,.08);
+
+    filter:blur(30px);
 }
 
-/* STATS */
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-margin-top:50px;
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(96,165,250,.3);
+
+    background:
+        rgba(255,255,255,.07);
+}
+
+.project-top{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+}
+
+.project-icon{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid var(--border);
+
+    font-size:22px;
+}
+
+.status{
+
+    padding:6px 10px;
+
+    border-radius:50px;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+}
+
+.status-live{
+
+    color:#6EE7B7;
+
+    background:
+        rgba(16,185,129,.1);
+
+    border:
+        1px solid rgba(16,185,129,.15);
+}
+
+.status-dev{
+
+    color:#93C5FD;
+
+    background:
+        rgba(37,99,235,.1);
+
+    border:
+        1px solid rgba(37,99,235,.15);
+}
+
+.project-card h3{
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+.project-category{
+
+    color:var(--green);
+
+    font-size:11px;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+}
+
+.project-card p{
+
+    color:var(--text-muted);
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+.project-link{
+
+    position:absolute;
+
+    left:27px;
+    bottom:25px;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.project-link:hover{
+
+    color:var(--green);
+
+    transform:translateX(4px);
+}
+
+/* =========================================================
+   TECHNOLOGY
+========================================================= */
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:18px;
+}
+
+.tech-card{
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    transition:.3s;
+}
+
+.tech-card:hover{
+
+    transform:translateY(-5px);
+
+    background:
+        var(--surface-hover);
+}
+
+.tech-icon{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+}
+
+.tech-card h3{
+
+    font-size:15px;
+
+    margin-bottom:7px;
+}
+
+.tech-card p{
+
+    color:var(--text-muted);
+
+    font-size:12px;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-content h2{
+
+    font-size:
+        clamp(32px,5vw,46px);
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:20px;
+}
+
+.about-content p{
+
+    color:var(--text-muted);
+
+    font-size:15px;
+
+    margin-bottom:18px;
+}
+
+.about-list{
+
+    margin-top:25px;
+
+    display:grid;
+
+    gap:12px;
+}
+
+.about-list div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--text-soft);
+
+    font-size:14px;
+}
+
+.check{
+
+    width:25px;
+    height:25px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:8px;
+
+    color:var(--green);
+
+    background:
+        rgba(0,230,118,.08);
+}
+
+.about-card{
+
+    padding:35px;
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37,99,235,.13),
+            rgba(0,230,118,.05)
+        );
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+.about-card-label{
+
+    color:var(--green);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.about-card h3{
+
+    font-size:27px;
+
+    line-height:1.25;
+
+    margin-bottom:15px;
+}
+
+.about-card p{
+
+    color:var(--text-muted);
+
+    font-size:14px;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:18px;
 }
 
 .stat{
-text-align:center;
-padding:25px;
-background:rgba(255,255,255,.03);
-border-radius:18px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        rgba(255,255,255,.03);
 }
 
-.stat h2{
-font-size:38px;
-color:#00e676;
+.stat-number{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--blue-light)
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:5px;
 }
 
-/* CTA */
+.stat-label{
+
+    color:var(--text-muted);
+
+    font-size:12px;
+}
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.timeline{
+
+    max-width:780px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:18px;
+
+    top:0;
+    bottom:0;
+
+    width:1px;
+
+    background:
+        linear-gradient(
+            var(--blue),
+            var(--green),
+            transparent
+        );
+}
+
+.timeline-item{
+
+    position:relative;
+
+    padding-left:60px;
+
+    margin-bottom:45px;
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:10px;
+    top:4px;
+
+    width:17px;
+    height:17px;
+
+    border-radius:50%;
+
+    background:var(--bg);
+
+    border:
+        2px solid var(--green);
+
+    box-shadow:
+        0 0 15px rgba(0,230,118,.25);
+}
+
+.timeline-year{
+
+    color:var(--green);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:5px;
+}
+
+.timeline-item h3{
+
+    font-size:18px;
+
+    margin-bottom:5px;
+}
+
+.timeline-item p{
+
+    color:var(--text-muted);
+
+    font-size:13px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
 .cta{
-text-align:center;
-padding:80px 10%;
+
+    padding:
+        40px 0
+        120px;
 }
 
 .cta-box{
-background:linear-gradient(135deg,#2563eb33,#00e67622);
-padding:50px;
-border-radius:30px;
-border:1px solid rgba(255,255,255,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:
+        75px 25px;
+
+    border-radius:
+        var(--radius-xl);
+
+    border:
+        1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37,99,235,.16),
+            rgba(0,230,118,.07)
+        );
+}
+
+.cta-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        rgba(37,99,235,.08);
+
+    filter:blur(60px);
+
+    pointer-events:none;
+}
+
+.cta-content{
+
+    position:relative;
+
+    z-index:1;
 }
 
 .cta h2{
-font-size:34px;
-margin-bottom:15px;
+
+    font-size:
+        clamp(30px,5vw,44px);
+
+    letter-spacing:-2px;
+
+    margin-bottom:14px;
 }
 
 .cta p{
-color:#cbd5e1;
-margin-bottom:25px;
+
+    color:var(--text-muted);
+
+    max-width:560px;
+
+    margin:
+        0 auto
+        28px;
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer{
-padding:50px 10%;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.05);
-color:#94a3b8;
+
+    border-top:
+        1px solid var(--border);
+
+    padding:
+        55px 0
+        35px;
 }
 
-.links{
-margin-top:20px;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
+.footer-main{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:40px;
 }
 
-.links a{
-padding:12px 20px;
-border-radius:50px;
-text-decoration:none;
-color:white;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.08);
-transition:.3s;
+.footer-brand{
+
+    max-width:350px;
 }
 
-.links a:hover{
-background:#2563eb;
-transform:translateY(-3px);
+.footer-brand h2{
+
+    font-size:20px;
+
+    margin-bottom:10px;
 }
 
-@media(max-width:768px){
-.hero h1{font-size:38px;}
-nav{padding:20px;}
-.section{padding:80px 20px;}
+.footer-brand p{
+
+    color:var(--text-muted);
+
+    font-size:13px;
 }
+
+.footer-links{
+
+    display:flex;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+}
+
+.footer-column h4{
+
+    font-size:12px;
+
+    margin-bottom:12px;
+
+    color:#fff;
+}
+
+.footer-column a{
+
+    display:block;
+
+    color:var(--text-muted);
+
+    font-size:12px;
+
+    margin-bottom:8px;
+
+    transition:.2s;
+}
+
+.footer-column a:hover{
+
+    color:var(--green);
+}
+
+.footer-bottom{
+
+    margin-top:40px;
+
+    padding-top:25px;
+
+    border-top:
+        1px solid rgba(255,255,255,.05);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    color:#64748B;
+
+    font-size:11px;
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .projects-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .tech-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .stats-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .about{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+
+        height:68px;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        left:20px;
+        right:20px;
+
+        top:78px;
+
+        padding:20px;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:4px;
+
+        border:
+            1px solid var(--border);
+
+        border-radius:20px;
+
+        background:
+            rgba(10,14,25,.96);
+
+        backdrop-filter:blur(20px);
+
+        box-shadow:
+            0 20px 50px rgba(0,0,0,.4);
+    }
+
+    .nav-links.active{
+
+        display:flex;
+    }
+
+    .nav-links a{
+
+        padding:13px;
+
+        border-radius:10px;
+    }
+
+    .nav-links a:hover{
+
+        background:
+            rgba(255,255,255,.05);
+    }
+
+    .nav-button{
+
+        text-align:center;
+    }
+
+    .menu-button{
+
+        display:block;
+    }
+
+    .hero{
+
+        padding:
+            75px 0
+            90px;
+    }
+
+    .hero h1{
+
+        letter-spacing:-2.5px;
+    }
+
+    .hero-decoration{
+
+        width:390px;
+        height:390px;
+    }
+
+    .section{
+
+        padding:80px 0;
+    }
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .tech-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-main{
+
+        flex-direction:column;
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}
+
+@media(max-width:450px){
+
+    .container{
+
+        width:
+            calc(100% - 30px);
+    }
+
+    .tech-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero-actions{
+
+        flex-direction:column;
+    }
+
+    .hero-actions .btn{
+
+        width:100%;
+    }
+
+    .cta-box{
+
+        padding:
+            55px 20px;
+    }
+
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="bg"></div>
+<div class="background"></div>
 
-<!-- NAV -->
-<nav>
-<div class="logo"><span>GO</span> Studio </div>
-<div>
-<a href="#projects">Projets</a>
-<a href="#stats">Stats</a>
-<a href="#contact">Contact</a>
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="container">
+
+<nav class="navbar">
+
+<a href="#home" class="logo">
+
+<div class="logo-mark">
+GO
 </div>
+
+<div>
+<span>GO</span> Studio
+</div>
+
+</a>
+
+<button
+class="menu-button"
+id="menuButton"
+aria-label="Ouvrir le menu"
+>
+☰
+</button>
+
+<div class="nav-links" id="navLinks">
+
+<a href="#projects">Projets</a>
+
+<a href="#technology">Technologies</a>
+
+<a href="#about">À propos</a>
+
+<a href="#journey">Notre parcours</a>
+
+<a href="#contact" class="nav-button">
+Contact
+</a>
+
+</div>
+
 </nav>
 
-<!-- HERO -->
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main id="home">
+
 <section class="hero">
+
+<div class="hero-decoration"></div>
+
+<div class="container">
+
 <div class="hero-content">
 
-<h1>Construire le futur avec <span>innovation</span></h1>
+<div class="hero-badge">
+
+<span class="badge-dot"></span>
+
+Studio technologique indépendant
+
+</div>
+
+<h1>
+
+Building ideas.<br>
+
+Creating
+
+<span class="gradient-text">
+technology.
+</span>
+
+</h1>
+
+<p class="hero-description">
+
+GO Studio LLC crée des applications Android,
+des expériences alimentées par l'intelligence artificielle
+et des solutions numériques modernes pour transformer
+les idées en produits utiles.
+
+</p>
+
+<div class="hero-actions">
+
+<a
+href="#projects"
+class="btn btn-primary"
+>
+Explorer nos projets →
+</a>
+
+<a
+href="#about"
+class="btn btn-secondary"
+>
+Découvrir GO Studio
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MARQUEE
+===================================================== -->
+
+<div class="marquee">
+
+<div class="marquee-track">
+
+<div class="marquee-item">
+🚀 MotivPlus
+</div>
+
+<div class="marquee-item">
+🤖 Nexa AI
+</div>
+
+<div class="marquee-item">
+💼 BizPlus
+</div>
+
+<div class="marquee-item">
+💬 AI Chats
+</div>
+
+<div class="marquee-item">
+📚 Sketch Éduc
+</div>
+
+<div class="marquee-item">
+🥗 NutriApp
+</div>
+
+<div class="marquee-item">
+📱 Status Saver
+</div>
+
+<div class="marquee-item">
+🚀 Android Development
+</div>
+
+<div class="marquee-item">
+🤖 Artificial Intelligence
+</div>
+
+<div class="marquee-item">
+☁️ Cloud Solutions
+</div>
+
+<!-- duplicate for infinite animation -->
+
+<div class="marquee-item">
+🚀 MotivPlus
+</div>
+
+<div class="marquee-item">
+🤖 Nexa AI
+</div>
+
+<div class="marquee-item">
+💼 BizPlus
+</div>
+
+<div class="marquee-item">
+💬 AI Chats
+</div>
+
+<div class="marquee-item">
+📚 Sketch Éduc
+</div>
+
+<div class="marquee-item">
+🥗 NutriApp
+</div>
+
+<div class="marquee-item">
+📱 Status Saver
+</div>
+
+<div class="marquee-item">
+🚀 Android Development
+</div>
+
+<div class="marquee-item">
+🤖 Artificial Intelligence
+</div>
+
+<div class="marquee-item">
+☁️ Cloud Solutions
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section
+class="section"
+id="projects"
+>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="eyebrow">
+Our Work
+</span>
+
+<h2 class="section-title">
+Des idées transformées en projets.
+</h2>
+
+<p class="section-description">
+
+Une collection de projets développés autour
+de l'innovation, de l'IA, du mobile,
+de l'éducation et du business numérique.
+
+</p>
+
+</div>
+
+
+<div class="projects-grid">
+
+
+<!-- MotivPlus -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+🚀
+</div>
+
+<span class="status status-live">
+Live
+</span>
+
+</div>
+
+<h3>
+MotivPlus
+</h3>
+
+<div class="project-category">
+SOCIAL • MOTIVATION
+</div>
 
 <p>
-GO Studio développe des applications Android, des systèmes IA,
-et des solutions numériques modernes pour transformer les idées en réalité.
+
+Une plateforme sociale pensée pour partager
+des messages positifs, de la motivation,
+de la poésie et des contenus inspirants.
+
 </p>
 
-<div class="buttons">
-<a href="#projects" class="btn primary">Découvrir</a>
-<a href="#contact" class="btn secondary">Nous contacter</a>
+<a
+href="#contact"
+class="project-link"
+>
+Découvrir →
+</a>
+
+</article>
+
+
+<!-- Nexa AI -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+🤖
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+Nexa AI
+</h3>
+
+<div class="project-category">
+ARTIFICIAL INTELLIGENCE
+</div>
+
+<p>
+
+Un projet d'assistant IA conçu pour offrir
+des conversations intelligentes et une
+expérience moderne autour de l'IA.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+Explorer →
+</a>
+
+</article>
+
+
+<!-- BizPlus -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+💼
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+BizPlus
+</h3>
+
+<div class="project-category">
+BUSINESS • MARKETPLACE
+</div>
+
+<p>
+
+Une solution destinée aux entreprises permettant
+de présenter leurs produits et de développer
+leur présence numérique.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+En savoir plus →
+</a>
+
+</article>
+
+
+<!-- AI Chats -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+💬
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+AI Chats
+</h3>
+
+<div class="project-category">
+MULTI-AI
+</div>
+
+<p>
+
+Une expérience de conversation réunissant
+différentes capacités d'intelligence artificielle
+dans une même application.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+Explorer →
+</a>
+
+</article>
+
+
+<!-- Sketch Educ -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+📚
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+Sketch Éduc
+</h3>
+
+<div class="project-category">
+EDUCATION • ANDROID
+</div>
+
+<p>
+
+Un projet éducatif autour du développement
+Android et de l'apprentissage de la création
+d'applications.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+Découvrir →
+</a>
+
+</article>
+
+
+<!-- NutriApp -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+🥗
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+NutriApp
+</h3>
+
+<div class="project-category">
+EDUCATION • NUTRITION
+</div>
+
+<p>
+
+Une application orientée vers l'éducation
+nutritionnelle et la présentation d'informations
+utiles de manière accessible.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+Explorer →
+</a>
+
+</article>
+
+
+<!-- Status Saver -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+📱
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+Status Saver
+</h3>
+
+<div class="project-category">
+ANDROID • UTILITY
+</div>
+
+<p>
+
+Un utilitaire Android conçu autour de la
+gestion et de la sauvegarde de contenus
+de statut.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+En savoir plus →
+</a>
+
+</article>
+
+
+<!-- GO Studio Utils -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+🧩
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+GO Studio Utils
+</h3>
+
+<div class="project-category">
+ANDROID • DEVELOPER TOOLS
+</div>
+
+<p>
+
+Une collection d'outils et de composants
+destinés à accélérer le développement
+d'applications Android.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+Explorer →
+</a>
+
+</article>
+
+
+<!-- AI Core -->
+
+<article class="project-card reveal">
+
+<div class="project-top">
+
+<div class="project-icon">
+⚙️
+</div>
+
+<span class="status status-dev">
+Development
+</span>
+
+</div>
+
+<h3>
+AI Core System
+</h3>
+
+<div class="project-category">
+AI • SYSTEMS
+</div>
+
+<p>
+
+Une architecture expérimentale destinée à
+organiser les fonctionnalités intelligentes
+et les interactions avec différents services IA.
+
+</p>
+
+<a
+href="#contact"
+class="project-link"
+>
+Explorer →
+</a>
+
+</article>
+
+
 </div>
 
 </div>
+
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee">
-<div>
-<span>🚀 MotivPlus</span>
-<span>🤖 Lunaris AI</span>
-<span>💬 AI Chats</span>
-<span>📚 Sketch Éduc</span>
-<span>🍒 NutriApp</span>
-<span>📱 Status Saver</span>
-<span>🚀 MotivPlus</span>
-<span>🤖 Lunaris AI</span>
-</div>
-</div>
 
-<!-- PROJECTS -->
-<section class="section" id="projects">
+<!-- =====================================================
+     TECHNOLOGY
+===================================================== -->
 
-<h2 class="title">Nos Projets</h2>
-<p class="subtitle">Des solutions modernes, rapides et intelligentes.</p>
+<section
+class="section"
+id="technology"
+>
 
-<div class="grid">
+<div class="container">
 
-<div class="card">
-<h3>🚀 MotivPlus</h3>
-<p>Plateforme sociale de motivation et partage positif.</p>
-</div>
+<div class="section-header reveal">
 
-<div class="card">
-<h3>🤖 Lunaris AI</h3>
-<p>Assistant intelligent basé sur l'intelligence artificielle.</p>
-</div>
+<span class="eyebrow">
+Technology
+</span>
 
-<div class="card">
-<h3>💬 AI Chats</h3>
-<p>Hub multi-AI pour conversations intelligentes.</p>
+<h2 class="section-title">
+Ce que nous construisons.
+</h2>
+
+<p class="section-description">
+
+GO Studio explore différentes technologies
+pour créer des expériences mobiles et
+numériques modernes.
+
+</p>
+
 </div>
 
-<div class="card">
-<h3>📚 Sketch Éduc</h3>
-<p>Apprentissage Sketchware Pro et développement Android.</p>
+
+<div class="tech-grid">
+
+<div class="tech-card reveal">
+
+<div class="tech-icon">
+📱
+</div>
+
+<h3>
+Android
+</h3>
+
+<p>
+Applications mobiles et expériences natives.
+</p>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-icon">
+🤖
+</div>
+
+<h3>
+Artificial Intelligence
+</h3>
+
+<p>
+Assistants, conversations et systèmes IA.
+</p>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-icon">
+☁️
+</div>
+
+<h3>
+Cloud & Backend
+</h3>
+
+<p>
+Données, authentification et services cloud.
+</p>
+
+</div>
+
+
+<div class="tech-card reveal">
+
+<div class="tech-icon">
+🎨
+</div>
+
+<h3>
+UI / UX
+</h3>
+
+<p>
+Interfaces modernes inspirées de Material Design.
+</p>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- STATS -->
-<section class="section" id="stats">
 
-<h2 class="title">Statistiques</h2>
+<!-- =====================================================
+     STATS
+===================================================== -->
 
-<div class="stats">
-
-<div class="stat">
-<h2>10+</h2>
-<p>Applications</p>
-</div>
-
-<div class="stat">
-<h2>5+</h2>
-<p>Projets IA</p>
-</div>
-
-<div class="stat">
-<h2>1000+</h2>
-<p>Utilisateurs</p>
-</div>
-
-<div class="stat">
-<h2>24/7</h2>
-<p>Innovation</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- VISION -->
 <section class="section">
 
-<h2 class="title">Notre Vision</h2>
+<div class="container">
 
-<p class="subtitle">
-GO Studio construit des applications modernes,
-accessibles et innovantes pour aider chacun à créer,
-apprendre et progresser grâce à la technologie.
-</p>
+<div class="section-header reveal">
 
-</section>
+<span class="eyebrow">
+GO Studio
+</span>
 
-
-<!-- CTA -->
-<section class="cta" id="contact">
-<div class="cta-box">
-
-<h2>Travaillons ensemble</h2>
-<p>Contactez GO Studio pour créer des projets innovants.</p>
-
-<a href="https://t.me/GoStudioLLC" class="btn primary">Telegram</a>
-<a href="mailto:gollcofficiel@gmail.com" class="btn secondary">Email</a>
+<h2 class="section-title">
+Une aventure en constante évolution.
+</h2>
 
 </div>
+
+
+<div class="stats-grid">
+
+<div class="stat reveal">
+
+<div class="stat-number">
+10+
+</div>
+
+<div class="stat-label">
+Projets et applications
+</div>
+
+</div>
+
+
+<div class="stat reveal">
+
+<div class="stat-number">
+5+
+</div>
+
+<div class="stat-label">
+Projets liés à l'IA
+</div>
+
+</div>
+
+
+<div class="stat reveal">
+
+<div class="stat-number">
+2026
+</div>
+
+<div class="stat-label">
+Une nouvelle étape
+</div>
+
+</div>
+
+
+<div class="stat reveal">
+
+<div class="stat-number">
+∞
+</div>
+
+<div class="stat-label">
+Idées à construire
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- FOOTER -->
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+class="section"
+id="about"
+>
+
+<div class="container">
+
+<div class="about">
+
+<div class="about-content reveal">
+
+<span class="eyebrow">
+About GO Studio
+</span>
+
+<h2>
+Créer. Innover. Inspirer.
+</h2>
+
+<p>
+
+GO Studio LLC est un studio technologique
+indépendant qui développe des applications,
+des expériences basées sur l'intelligence
+artificielle et des solutions numériques.
+
+</p>
+
+<p>
+
+Notre objectif est de transformer des idées
+simples en produits utiles, modernes et
+accessibles.
+
+</p>
+
+
+<div class="about-list">
+
+<div>
+
+<span class="check">
+✓
+</span>
+
+Applications Android
+
+</div>
+
+
+<div>
+
+<span class="check">
+✓
+</span>
+
+Intelligence artificielle
+
+</div>
+
+
+<div>
+
+<span class="check">
+✓
+</span>
+
+Solutions numériques
+
+</div>
+
+
+<div>
+
+<span class="check">
+✓
+</span>
+
+Interfaces modernes
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="about-card reveal">
+
+<div class="about-card-label">
+Our Vision
+</div>
+
+<h3>
+
+La technologie doit transformer
+les idées en possibilités.
+
+</h3>
+
+<p>
+
+Chez GO Studio, chaque projet commence
+par une idée. Nous cherchons ensuite à
+la transformer en une expérience simple,
+utile et moderne.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
+
+<section
+class="section"
+id="journey"
+>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="eyebrow">
+Our Journey
+</span>
+
+<h2 class="section-title">
+Le parcours de GO Studio.
+</h2>
+
+<p class="section-description">
+
+Un studio construit progressivement,
+projet après projet.
+
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+BEGINNING
+</div>
+
+<h3>
+Les premières expériences
+</h3>
+
+<p>
+
+Exploration du développement mobile,
+création des premières applications
+et apprentissage continu.
+
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+MOTIVPLUS
+</div>
+
+<h3>
+Une plateforme sociale voit le jour
+</h3>
+
+<p>
+
+MotivPlus devient l'un des projets
+importants de l'écosystème GO Studio,
+avec une orientation sociale et positive.
+
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+2026
+</div>
+
+<h3>
+Expansion vers l'intelligence artificielle
+</h3>
+
+<p>
+
+Développement de Nexa AI, AI Chats et
+d'autres expériences autour de l'intelligence
+artificielle.
+
+</p>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-year">
+NEXT
+</div>
+
+<h3>
+Construire davantage
+</h3>
+
+<p>
+
+GO Studio continue d'explorer le mobile,
+l'IA, le business numérique, le cloud
+et les outils destinés aux développeurs.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section
+class="cta"
+id="contact"
+>
+
+<div class="container">
+
+<div class="cta-box">
+
+<div class="cta-content">
+
+<span class="eyebrow">
+Let's build
+</span>
+
+<h2>
+Une idée ? Construisons-la.
+</h2>
+
+<p>
+
+Vous souhaitez suivre les projets de
+GO Studio, discuter d'une idée ou
+simplement découvrir notre travail ?
+
+</p>
+
+
+<div class="hero-actions">
+
+<a
+href="https://t.me/GoStudioLLC"
+target="_blank"
+rel="noopener"
+class="btn btn-primary"
+>
+Telegram →
+</a>
+
+<a
+href="mailto:gollcofficiel@gmail.com"
+class="btn btn-secondary"
+>
+Envoyer un email
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
-<h2>GO Studio</h2>
-<p>Créer • Innover • Inspirer</p>
+<div class="container">
 
-<p>© 2026 GO Studio LLC — Tous droits réservés</p>
+<div class="footer-main">
 
-<div class="links">
 
-<a href="https://github.com/alainsmubbanji" target="_blank">GitHub</a>
-<a href="https://t.me/GoStudioLLC" target="_blank">Telegram</a>
-<a href="mailto:gollcofficiel@gmail.com">Contact</a>
+<div class="footer-brand">
+
+<a href="#home" class="logo">
+
+<div class="logo-mark">
+GO
+</div>
+
+<div>
+<span>GO</span> Studio
+</div>
+
+</a>
+
+<br>
+
+<p>
+
+Independent technology studio building
+Android applications, AI experiences
+and digital solutions.
+
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+
+<div class="footer-column">
+
+<h4>
+Explore
+</h4>
+
+<a href="#projects">
+Projects
+</a>
+
+<a href="#technology">
+Technology
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#journey">
+Journey
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+Projects
+</h4>
+
+<a href="#projects">
+MotivPlus
+</a>
+
+<a href="#projects">
+Nexa AI
+</a>
+
+<a href="#projects">
+BizPlus
+</a>
+
+<a href="#projects">
+AI Chats
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+Connect
+</h4>
+
+<a
+href="https://github.com/alainsmubbanji"
+target="_blank"
+rel="noopener"
+>
+GitHub
+</a>
+
+<a
+href="https://t.me/GoStudioLLC"
+target="_blank"
+rel="noopener"
+>
+Telegram
+</a>
+
+<a href="mailto:gollcofficiel@gmail.com">
+Email
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 GO Studio LLC
+</span>
+
+<span>
+Create • Innovate • Inspire
+</span>
+
+</div>
 
 </div>
 
 </footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuButton.addEventListener(
+    "click",
+    () => {
+
+        navLinks.classList.toggle(
+            "active"
+        );
+
+    }
+);
+
+
+/* Close menu after clicking */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            navLinks.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(
+                entry => {
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target
+                            .classList
+                            .add("visible");
+
+                        revealObserver
+                            .unobserve(
+                                entry.target
+                            );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+
+revealElements.forEach(
+    element => {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+);
+
+
+/* =========================================================
+   NAVIGATION ACTIVE STATE
+========================================================= */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+const navigationLinks =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        let current = "";
+
+        sections.forEach(
+            section => {
+
+                const sectionTop =
+                    section.offsetTop - 120;
+
+                if(
+                    window.scrollY >=
+                    sectionTop
+                ){
+
+                    current =
+                        section.getAttribute(
+                            "id"
+                        );
+
+                }
+
+            }
+        );
+
+
+        navigationLinks.forEach(
+            link => {
+
+                link.style.color = "";
+
+                if(
+                    link.getAttribute(
+                        "href"
+                    ) === "#" + current
+                ){
+
+                    link.style.color =
+                        "#FFFFFF";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+const year =
+    new Date().getFullYear();
+
+const yearElements =
+    document.querySelectorAll(
+        ".footer-bottom span:first-child"
+    );
+
+yearElements.forEach(
+    element => {
+
+        element.textContent =
+            "© " +
+            year +
+            " GO Studio LLC";
+
+    }
+);
+
+</script>
 
 </body>
 </html>
