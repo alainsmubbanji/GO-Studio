@@ -16,18 +16,19 @@
 
 <meta
     name="description"
-    content="GO Studio LLC — Applications, intelligence artificielle et innovation numérique."
+    content="GO Studio LLC — Applications Android, intelligence artificielle, outils numériques et innovation."
 >
 
 <title>GO Studio LLC</title>
 
 
 <!-- =====================================================
-     MATERIAL SYMBOLS
+     GOOGLE MATERIAL SYMBOLS
+     Source officielle Google
 ===================================================== -->
 
 <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL,wght,GRAD,opsz@0..1,400..600,-25..200,20..48&icon_names=apps,arrow_forward,auto_awesome,bolt,brightness_7,business,check_circle,chat,close,code,dark_mode,developer_mode,download,expand_more,github,language,light_mode,lightbulb,mail,menu,rocket_launch,school,science,send,settings,smart_toy,storefront,terminal,update&display=block"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     rel="stylesheet"
 >
 
@@ -35,7 +36,7 @@
 <style>
 
 /* =====================================================
-   GO STUDIO V3.2
+   GO STUDIO WEB V3.3
    MATERIAL 3 INSPIRED
 ===================================================== */
 
@@ -78,7 +79,7 @@
     --info-container:#D6ECFF;
 
     --shadow:
-        0 7px 24px rgba(0,0,0,.08);
+        0 8px 28px rgba(0,0,0,.08);
 
     --radius-sm:12px;
     --radius-md:18px;
@@ -86,6 +87,10 @@
     --radius-xl:34px;
 }
 
+
+/* =====================================================
+   DARK THEME
+===================================================== */
 
 body.dark{
 
@@ -126,7 +131,7 @@ body.dark{
     --info-container:#12364A;
 
     --shadow:
-        0 8px 30px rgba(0,0,0,.32);
+        0 8px 30px rgba(0,0,0,.35);
 }
 
 
@@ -187,26 +192,35 @@ button{
     font-family:
         "Material Symbols Outlined";
 
-    font-weight:normal;
+    font-weight:400;
+
     font-style:normal;
 
     font-size:24px;
 
     line-height:1;
 
-    letter-spacing:normal;
-
-    text-transform:none;
+    display:inline-block;
 
     white-space:nowrap;
 
     direction:ltr;
 
+    letter-spacing:normal;
+
+    text-transform:none;
+
+    word-wrap:normal;
+
     -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+    font-feature-settings:"liga";
 
     font-variation-settings:
         "FILL" 0,
-        "wght" 500,
+        "wght" 400,
         "GRAD" 0,
         "opsz" 24;
 }
@@ -231,7 +245,7 @@ button{
     background:
         color-mix(
             in srgb,
-            var(--background) 90%,
+            var(--background) 92%,
             transparent
         );
 
@@ -242,7 +256,6 @@ button{
     border-bottom:
         1px solid var(--outline-soft);
 }
-
 
 .header-inner{
 
@@ -264,6 +277,8 @@ button{
 }
 
 
+/* LOGO */
+
 .logo{
 
     display:flex;
@@ -274,7 +289,6 @@ button{
 
     font-weight:800;
 }
-
 
 .logo-icon{
 
@@ -292,7 +306,7 @@ button{
 
     color:var(--on-primary);
 
-    font-size:14px;
+    font-size:13px;
 
     font-weight:900;
 
@@ -301,17 +315,17 @@ button{
         rgba(103,80,164,.22);
 }
 
-
 .logo-text{
 
     font-size:15px;
 }
 
-
 .logo-text span{
     color:var(--primary);
 }
 
+
+/* NAVIGATION */
 
 .nav{
 
@@ -321,7 +335,6 @@ button{
 
     gap:3px;
 }
-
 
 .nav a{
 
@@ -336,7 +349,6 @@ button{
     transition:.2s;
 }
 
-
 .nav a:hover{
 
     background:var(--surface-container);
@@ -344,6 +356,8 @@ button{
     color:var(--text);
 }
 
+
+/* ACTIONS */
 
 .header-actions{
 
@@ -353,7 +367,6 @@ button{
 
     gap:7px;
 }
-
 
 .icon-button{
 
@@ -378,14 +391,12 @@ button{
     transition:.2s;
 }
 
-
 .icon-button:hover{
 
     transform:translateY(-2px);
 
     background:var(--surface-high);
 }
-
 
 .menu-button{
     display:flex;
@@ -430,7 +441,6 @@ button{
     z-index:120;
 }
 
-
 .mobile-menu.open{
 
     opacity:1;
@@ -441,7 +451,6 @@ button{
         translateY(0)
         scale(1);
 }
-
 
 .mobile-menu a{
 
@@ -460,7 +469,6 @@ button{
     font-size:13px;
 }
 
-
 .mobile-menu a:hover{
 
     background:var(--surface-container);
@@ -477,7 +485,6 @@ main{
     padding-top:68px;
 }
 
-
 .container{
 
     width:100%;
@@ -486,8 +493,7 @@ main{
 
     margin:auto;
 
-    padding:
-        0 18px;
+    padding:0 18px;
 }
 
 
@@ -508,10 +514,8 @@ main{
 
     text-align:center;
 
-    padding:
-        70px 0;
+    padding:70px 0;
 }
-
 
 .hero::before{
 
@@ -529,8 +533,7 @@ main{
 
     left:50%;
 
-    transform:
-        translateX(-50%);
+    transform:translateX(-50%);
 
     border-radius:50%;
 
@@ -550,14 +553,12 @@ main{
     pointer-events:none;
 }
 
-
 .hero-content{
 
     max-width:850px;
 
     margin:auto;
 }
-
 
 .hero-badge{
 
@@ -584,18 +585,9 @@ main{
     letter-spacing:.8px;
 }
 
-
 .hero-badge .material-symbols-outlined{
-
-    font-size:16px;
-
-    font-variation-settings:
-        "FILL" 1,
-        "wght" 500,
-        "GRAD" 0,
-        "opsz" 20;
+    font-size:17px;
 }
-
 
 .hero h1{
 
@@ -609,11 +601,9 @@ main{
     margin-bottom:22px;
 }
 
-
 .hero h1 span{
     color:var(--primary);
 }
-
 
 .hero-description{
 
@@ -626,7 +616,6 @@ main{
     font-size:
         clamp(14px,2vw,18px);
 }
-
 
 .hero-buttons{
 
@@ -644,12 +633,13 @@ main{
 }
 
 
+/* BUTTON */
+
 .btn{
 
     min-height:46px;
 
-    padding:
-        11px 20px;
+    padding:11px 20px;
 
     border-radius:50px;
 
@@ -668,11 +658,9 @@ main{
     transition:.2s;
 }
 
-
 .btn:hover{
     transform:translateY(-3px);
 }
-
 
 .btn.primary{
 
@@ -685,7 +673,6 @@ main{
         rgba(103,80,164,.18);
 }
 
-
 .btn.secondary{
 
     background:var(--surface-container);
@@ -695,7 +682,6 @@ main{
     border:
         1px solid var(--outline-soft);
 }
-
 
 .btn .material-symbols-outlined{
     font-size:19px;
@@ -728,11 +714,9 @@ main{
     background:var(--surface);
 }
 
-
 .quick-stat{
 
-    padding:
-        18px 8px;
+    padding:18px 8px;
 
     text-align:center;
 
@@ -740,11 +724,9 @@ main{
         1px solid var(--outline-soft);
 }
 
-
 .quick-stat:last-child{
     border-right:0;
 }
-
 
 .quick-stat strong{
 
@@ -756,7 +738,6 @@ main{
 
     line-height:1.1;
 }
-
 
 .quick-stat span{
 
@@ -772,12 +753,10 @@ main{
 
 .section{
 
-    padding:
-        95px 0;
+    padding:95px 0;
 
     scroll-margin-top:80px;
 }
-
 
 .section-header{
 
@@ -788,7 +767,6 @@ main{
 
     text-align:center;
 }
-
 
 .section-label{
 
@@ -807,7 +785,6 @@ main{
     letter-spacing:1px;
 }
 
-
 .section-title{
 
     font-size:
@@ -820,7 +797,6 @@ main{
     margin-bottom:10px;
 }
 
-
 .section-description{
 
     color:var(--text-secondary);
@@ -830,7 +806,7 @@ main{
 
 
 /* =====================================================
-   PROJECT FILTER
+   PROJECT FILTERS
 ===================================================== */
 
 .project-filters{
@@ -846,13 +822,11 @@ main{
     margin-bottom:28px;
 }
 
-
 .filter{
 
     border:0;
 
-    padding:
-        9px 15px;
+    padding:9px 15px;
 
     border-radius:50px;
 
@@ -869,12 +843,9 @@ main{
     transition:.2s;
 }
 
-
 .filter:hover{
-
     background:var(--surface-high);
 }
-
 
 .filter.active{
 
@@ -885,7 +856,7 @@ main{
 
 
 /* =====================================================
-   PROJECT GRID
+   PROJECTS
 ===================================================== */
 
 .projects{
@@ -893,15 +864,12 @@ main{
     display:grid;
 
     grid-template-columns:
-        repeat(2,minmax(0,1fr));
+        repeat(3,minmax(0,1fr));
 
     gap:15px;
 }
 
-
 .project-card{
-
-    position:relative;
 
     overflow:hidden;
 
@@ -916,24 +884,19 @@ main{
 
     transition:
         transform .25s,
-        box-shadow .25s,
-        opacity .2s;
+        box-shadow .25s;
 }
-
 
 .project-card:hover{
 
-    transform:
-        translateY(-5px);
+    transform:translateY(-5px);
 
     box-shadow:var(--shadow);
 }
 
-
 .project-card.hidden{
     display:none;
 }
-
 
 .project-top{
 
@@ -947,7 +910,6 @@ main{
 
     margin-bottom:17px;
 }
-
 
 .project-icon{
 
@@ -968,65 +930,9 @@ main{
     color:var(--on-primary-container);
 }
 
-
 .project-icon .material-symbols-outlined{
     font-size:27px;
 }
-
-
-/* =====================================================
-   STATUS
-===================================================== */
-
-.status{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:5px;
-
-    padding:
-        6px 9px;
-
-    border-radius:50px;
-
-    font-size:8px;
-
-    font-weight:800;
-
-    white-space:nowrap;
-}
-
-
-.status .material-symbols-outlined{
-    font-size:13px;
-}
-
-
-.status.published{
-
-    background:var(--success-container);
-
-    color:var(--success);
-}
-
-
-.status.development{
-
-    background:var(--warning-container);
-
-    color:var(--warning);
-}
-
-
-.status.experimental{
-
-    background:var(--info-container);
-
-    color:var(--info);
-}
-
 
 .project-tag{
 
@@ -1041,15 +947,12 @@ main{
     letter-spacing:.7px;
 }
 
-
 .project-card h3{
 
     font-size:18px;
 
-    margin:
-        5px 0 7px;
+    margin:5px 0 7px;
 }
-
 
 .project-card p{
 
@@ -1060,6 +963,55 @@ main{
     margin-bottom:17px;
 }
 
+
+/* STATUS */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    padding:6px 9px;
+
+    border-radius:50px;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+}
+
+.status .material-symbols-outlined{
+    font-size:13px;
+}
+
+.status.published{
+
+    background:var(--success-container);
+
+    color:var(--success);
+}
+
+.status.development{
+
+    background:var(--warning-container);
+
+    color:var(--warning);
+}
+
+.status.experimental{
+
+    background:var(--info-container);
+
+    color:var(--info);
+}
+
+
+/* TECHNOLOGY CHIPS */
 
 .project-techs{
 
@@ -1072,11 +1024,9 @@ main{
     margin-bottom:18px;
 }
 
-
 .tech-chip{
 
-    padding:
-        5px 9px;
+    padding:5px 9px;
 
     border-radius:50px;
 
@@ -1090,6 +1040,8 @@ main{
 }
 
 
+/* PROJECT BUTTONS */
+
 .project-actions{
 
     display:flex;
@@ -1099,7 +1051,6 @@ main{
     gap:7px;
 }
 
-
 .project-button{
 
     display:inline-flex;
@@ -1108,8 +1059,7 @@ main{
 
     gap:5px;
 
-    padding:
-        8px 12px;
+    padding:8px 12px;
 
     border-radius:50px;
 
@@ -1124,7 +1074,6 @@ main{
     transition:.2s;
 }
 
-
 .project-button.primary{
 
     background:var(--primary);
@@ -1132,20 +1081,16 @@ main{
     color:var(--on-primary);
 }
 
-
 .project-button:hover{
     transform:translateY(-2px);
 }
-
 
 .project-button .material-symbols-outlined{
     font-size:16px;
 }
 
 
-/* =====================================================
-   PROJECT COUNT
-===================================================== */
+/* PROJECT COUNT */
 
 .project-count{
 
@@ -1160,14 +1105,15 @@ main{
 
 
 /* =====================================================
-   FEATURE
+   AI FEATURE
 ===================================================== */
 
 .feature{
 
     display:grid;
 
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:
+        1.15fr .85fr;
 
     gap:20px;
 
@@ -1188,7 +1134,6 @@ main{
     align-items:center;
 }
 
-
 .feature h3{
 
     font-size:
@@ -1199,7 +1144,6 @@ main{
     margin-bottom:11px;
 }
 
-
 .feature p{
 
     color:var(--text-secondary);
@@ -1208,7 +1152,6 @@ main{
 
     margin-bottom:20px;
 }
-
 
 .feature-visual{
 
@@ -1234,7 +1177,6 @@ main{
         );
 }
 
-
 .ai-icon{
 
     color:var(--primary);
@@ -1251,7 +1193,6 @@ main{
         "opsz" 48;
 }
 
-
 @keyframes float{
 
     0%,100%{
@@ -1265,7 +1206,7 @@ main{
 
 
 /* =====================================================
-   TECHNOLOGY
+   TECHNOLOGIES
 ===================================================== */
 
 .tech-grid{
@@ -1277,7 +1218,6 @@ main{
 
     gap:11px;
 }
-
 
 .tech{
 
@@ -1299,14 +1239,12 @@ main{
     transition:.2s;
 }
 
-
 .tech:hover{
 
     transform:translateY(-3px);
 
     background:var(--surface-high);
 }
-
 
 .tech .material-symbols-outlined{
 
@@ -1336,7 +1274,6 @@ main{
         1px solid var(--outline-soft);
 }
 
-
 .lab-grid{
 
     display:grid;
@@ -1348,7 +1285,6 @@ main{
 
     margin-top:25px;
 }
-
 
 .lab-item{
 
@@ -1362,14 +1298,12 @@ main{
         1px solid var(--outline-soft);
 }
 
-
 .lab-item .material-symbols-outlined{
 
     color:var(--primary);
 
     margin-bottom:7px;
 }
-
 
 .lab-item strong{
 
@@ -1379,7 +1313,6 @@ main{
 
     margin-bottom:4px;
 }
-
 
 .lab-item p{
 
@@ -1398,11 +1331,10 @@ main{
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3,minmax(0,1fr));
 
     gap:13px;
 }
-
 
 .value{
 
@@ -1418,7 +1350,6 @@ main{
         1px solid var(--outline-soft);
 }
 
-
 .value .material-symbols-outlined{
 
     color:var(--primary);
@@ -1428,14 +1359,12 @@ main{
     margin-bottom:9px;
 }
 
-
 .value h3{
 
     font-size:15px;
 
     margin-bottom:5px;
 }
-
 
 .value p{
 
@@ -1444,9 +1373,10 @@ main{
     font-size:11px;
 }
 
-/* =========================================================
+
+/* =====================================================
    STATS
-========================================================= */
+===================================================== */
 
 .stats-grid{
 
@@ -1455,44 +1385,32 @@ main{
     grid-template-columns:
         repeat(4,1fr);
 
-    gap:18px;
+    gap:15px;
 }
 
 .stat{
 
-    padding:30px 20px;
+    padding:25px 15px;
 
     text-align:center;
 
     border:
-        1px solid var(--border);
+        1px solid var(--outline-soft);
 
-    border-radius:
-        var(--radius-md);
+    border-radius:var(--radius-md);
 
-    background:
-        rgba(255,255,255,.03);
+    background:var(--surface);
 }
 
 .stat-number{
 
-    font-size:38px;
+    font-size:34px;
 
     font-weight:800;
 
     letter-spacing:-2px;
 
-    background:
-        linear-gradient(
-            90deg,
-            var(--green),
-            var(--blue-light)
-        );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    -webkit-text-fill-color:transparent;
+    color:var(--primary);
 
     margin-bottom:5px;
 }
@@ -1501,8 +1419,9 @@ main{
 
     color:var(--text-muted);
 
-    font-size:12px;
+    font-size:11px;
 }
+
 
 /* =====================================================
    TIMELINE
@@ -1516,7 +1435,6 @@ main{
 
     margin:auto;
 }
-
 
 .timeline::before{
 
@@ -1535,7 +1453,6 @@ main{
     background:var(--outline-soft);
 }
 
-
 .timeline-item{
 
     position:relative;
@@ -1543,7 +1460,6 @@ main{
     padding:
         0 0 30px 45px;
 }
-
 
 .timeline-dot{
 
@@ -1564,7 +1480,6 @@ main{
         4px solid var(--background);
 }
 
-
 .timeline-year{
 
     color:var(--primary);
@@ -1574,15 +1489,12 @@ main{
     font-weight:800;
 }
 
-
 .timeline-item h3{
 
     font-size:16px;
 
-    margin:
-        4px 0;
+    margin:4px 0;
 }
-
 
 .timeline-item p{
 
@@ -1591,89 +1503,6 @@ main{
     font-size:12px;
 }
 
-
-/* =====================================================
-   VALUES
-===================================================== */
-
-.values{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
-
-    gap:12px;
-}
-
-
-.value{
-
-    padding:23px;
-
-    text-align:center;
-
-    border-radius:22px;
-
-    background:var(--surface);
-
-    border:
-        1px solid var(--outline-soft);
-}
-
-
-.value .material-symbols-outlined{
-
-    color:var(--primary);
-
-    font-size:30px;
-
-    margin-bottom:10px;
-}
-
-
-.value h3{
-
-    font-size:15px;
-
-    margin-bottom:5px;
-}
-
-
-.value p{
-
-    color:var(--text-secondary);
-
-    font-size:11px;
-}
-
-.check{
-
-    width:25px;
-    height:25px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:8px;
-
-    color:var(--green);
-
-    background:
-        rgba(0,230,118,.08);
-}
-
-.projects-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:20px;
-}
 
 /* =====================================================
    CTA
@@ -1699,7 +1528,6 @@ main{
         1px solid var(--outline-soft);
 }
 
-
 .cta h2{
 
     font-size:
@@ -1709,7 +1537,6 @@ main{
 
     margin-bottom:10px;
 }
-
 
 .cta p{
 
@@ -1740,7 +1567,6 @@ footer{
         1px solid var(--outline-soft);
 }
 
-
 .footer-logo{
 
     display:flex;
@@ -1756,11 +1582,9 @@ footer{
     font-weight:800;
 }
 
-
 .footer-logo span{
     color:var(--primary);
 }
-
 
 .footer-description{
 
@@ -1773,7 +1597,6 @@ footer{
 
     font-size:11px;
 }
-
 
 .footer-links{
 
@@ -1788,7 +1611,6 @@ footer{
     margin-bottom:22px;
 }
 
-
 .footer-links a{
 
     display:flex;
@@ -1797,8 +1619,7 @@ footer{
 
     gap:5px;
 
-    padding:
-        8px 13px;
+    padding:8px 13px;
 
     border-radius:50px;
 
@@ -1809,11 +1630,9 @@ footer{
     font-size:10px;
 }
 
-
 .footer-links .material-symbols-outlined{
     font-size:15px;
 }
-
 
 .copyright{
 
@@ -1831,21 +1650,18 @@ footer{
 
     opacity:0;
 
-    transform:
-        translateY(22px);
+    transform:translateY(22px);
 
     transition:
         opacity .65s ease,
         transform .65s ease;
 }
 
-
 .reveal.visible{
 
     opacity:1;
 
-    transform:
-        translateY(0);
+    transform:translateY(0);
 }
 
 
@@ -1853,92 +1669,75 @@ footer{
    RESPONSIVE
 ===================================================== */
 
-@media(max-width:850px){
-
-    .feature{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .tech-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-
-    .lab-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-}
-
-
 @media(min-width:900px){
 
     .nav{
         display:flex;
     }
 
-
     .menu-button{
         display:none;
     }
 
-
     .mobile-menu{
         display:none;
     }
+}
 
+
+@media(max-width:900px){
+
+    .projects{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .feature{
+        grid-template-columns:1fr;
+    }
+
+    .tech-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .lab-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .stats-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 }
 
 
 @media(max-width:700px){
 
     .projects{
-
         grid-template-columns:1fr;
-
     }
-
 
     .values{
-
         grid-template-columns:1fr;
-
     }
-
 }
 
 
 @media(max-width:500px){
 
     .hero-buttons{
-
         flex-direction:column;
-
     }
-
 
     .hero-buttons .btn{
-
         width:100%;
-
     }
-
 
     .quick-stats{
-
         grid-template-columns:1fr;
-
     }
-
 
     .quick-stat{
 
@@ -1946,37 +1745,23 @@ footer{
 
         border-bottom:
             1px solid var(--outline-soft);
-
     }
-
 
     .quick-stat:last-child{
-
         border-bottom:0;
-
     }
-
 
     .tech-grid{
-
         grid-template-columns:1fr 1fr;
-
     }
-
 
     .lab-grid{
-
         grid-template-columns:1fr;
-
     }
 
-
-    .project-top{
-
-        flex-direction:row;
-
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
     }
-
 }
 
 
@@ -1991,11 +1776,8 @@ footer{
         transition:none !important;
 
         scroll-behavior:auto !important;
-
     }
-
 }
-
 
 </style>
 
@@ -2076,7 +1858,7 @@ dark_mode
 <button
     class="icon-button menu-button"
     id="menuButton"
-    aria-label="Menu"
+    aria-label="Ouvrir le menu"
 >
 
 <span
@@ -2113,7 +1895,7 @@ Projets
 
 <a href="#technology">
 <span class="material-symbols-outlined">
-developer_mode
+code
 </span>
 Technologies
 </a>
@@ -2130,6 +1912,13 @@ GO Studio Labs
 lightbulb
 </span>
 Notre vision
+</a>
+
+<a href="#timeline">
+<span class="material-symbols-outlined">
+history
+</span>
+Évolution
 </a>
 
 <a href="#contact">
@@ -2191,7 +1980,7 @@ De l'innovation.
 
 <p class="hero-description">
 
-GO Studio développe des applications,
+GO Studio développe des applications Android,
 des expériences d'intelligence artificielle
 et des solutions numériques pensées pour
 transformer des idées en projets concrets.
@@ -2262,11 +2051,11 @@ Intelligence artificielle
 <div class="quick-stat">
 
 <strong>
-GO
+M3
 </strong>
 
 <span>
-Studio Labs
+Design & expériences
 </span>
 
 </div>
@@ -2304,16 +2093,14 @@ Des projets déjà concrétisés
 
 <p class="section-description">
 
-Une partie de l'écosystème GO Studio,
-avec une distinction entre les projets
-déjà réalisés et ceux encore en développement.
+Découvrez une partie de l'écosystème
+GO Studio, entre applications publiées,
+projets en développement et expérimentations.
 
 </p>
 
 </div>
 
-
-<!-- FILTER -->
 
 <div class="project-filters reveal">
 
@@ -2348,12 +2135,12 @@ Expérimentaux
 </div>
 
 
-<!-- PROJECTS -->
-
 <div class="projects">
 
 
-<!-- MotivPlus -->
+<!-- =====================================================
+     MOTIVPLUS
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -2370,7 +2157,6 @@ rocket_launch
 
 </div>
 
-
 <div class="status published">
 
 <span class="material-symbols-outlined">
@@ -2383,47 +2169,31 @@ Publié
 
 </div>
 
-
 <span class="project-tag">
 Social • Android
 </span>
-
 
 <h3>
 MotivPlus
 </h3>
 
-
 <p>
 
-Une plateforme sociale de motivation
-permettant de partager des contenus positifs,
-d'interagir avec une communauté et
-d'explorer des fonctionnalités IA.
+Plateforme sociale de motivation permettant
+de partager des contenus positifs, découvrir
+des publications et explorer des fonctionnalités
+d'intelligence artificielle.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Android
-</span>
-
-<span class="tech-chip">
-Firebase
-</span>
-
-<span class="tech-chip">
-IA
-</span>
-
-<span class="tech-chip">
-Material 3
-</span>
+<span class="tech-chip">Android</span>
+<span class="tech-chip">Firebase</span>
+<span class="tech-chip">IA</span>
+<span class="tech-chip">Material 3</span>
 
 </div>
-
 
 <div class="project-actions">
 
@@ -2435,25 +2205,10 @@ Material 3
 >
 
 <span class="material-symbols-outlined">
-language
+description
 </span>
 
 Documentation
-
-</a>
-
-<a
-    href="https://t.me/GoStudioLLC"
-    target="_blank"
-    rel="noopener"
-    class="project-button"
->
-
-<span class="material-symbols-outlined">
-arrow_forward
-</span>
-
-Projet
 
 </a>
 
@@ -2462,7 +2217,9 @@ Projet
 </article>
 
 
-<!-- Lunaris -->
+<!-- =====================================================
+     LUNARIS AI
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -2474,11 +2231,10 @@ Projet
 <div class="project-icon">
 
 <span class="material-symbols-outlined">
-auto_awesome
+smart_toy
 </span>
 
 </div>
-
 
 <div class="status published">
 
@@ -2492,43 +2248,29 @@ Actif
 
 </div>
 
-
 <span class="project-tag">
 Artificial Intelligence
 </span>
-
 
 <h3>
 Lunaris AI
 </h3>
 
-
 <p>
 
-Assistant intelligent intégré à l'écosystème
-GO Studio, conçu pour accompagner
-les utilisateurs dans leurs conversations
-et leurs recherches.
+Assistant intelligent de l'écosystème GO Studio,
+conçu pour les conversations, la recherche
+d'informations et l'accompagnement numérique.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-AI
-</span>
-
-<span class="tech-chip">
-API
-</span>
-
-<span class="tech-chip">
-Chat
-</span>
+<span class="tech-chip">AI</span>
+<span class="tech-chip">API</span>
+<span class="tech-chip">Chat</span>
 
 </div>
-
 
 <div class="project-actions">
 
@@ -2540,7 +2282,7 @@ Chat
 >
 
 <span class="material-symbols-outlined">
-language
+description
 </span>
 
 Documentation
@@ -2552,7 +2294,9 @@ Documentation
 </article>
 
 
-<!-- AI Chats -->
+<!-- =====================================================
+     AI CHATS
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -2569,7 +2313,6 @@ chat
 
 </div>
 
-
 <div class="status published">
 
 <span class="material-symbols-outlined">
@@ -2582,64 +2325,36 @@ Concrétisé
 
 </div>
 
-
 <span class="project-tag">
 AI • Communication
 </span>
-
 
 <h3>
 AI Chats
 </h3>
 
-
 <p>
 
-Une expérience dédiée aux conversations
-avec des systèmes d'intelligence artificielle
-et à l'exploration des assistants numériques.
+Projet consacré aux conversations avec
+des systèmes d'intelligence artificielle
+et aux expériences autour des assistants.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Android
-</span>
-
-<span class="tech-chip">
-AI
-</span>
-
-<span class="tech-chip">
-Chat
-</span>
-
-</div>
-
-
-<div class="project-actions">
-
-<a
-    href="#contact"
-    class="project-button primary"
->
-
-<span class="material-symbols-outlined">
-arrow_forward
-</span>
-
-Découvrir
-
-</a>
+<span class="tech-chip">Android</span>
+<span class="tech-chip">AI</span>
+<span class="tech-chip">Chat</span>
 
 </div>
 
 </article>
 
 
-<!-- Sketch Educ -->
+<!-- =====================================================
+     SKETCH EDUC
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -2656,7 +2371,6 @@ school
 
 </div>
 
-
 <div class="status published">
 
 <span class="material-symbols-outlined">
@@ -2669,64 +2383,36 @@ Concrétisé
 
 </div>
 
-
 <span class="project-tag">
 Education
 </span>
-
 
 <h3>
 Sketch Éduc
 </h3>
 
-
 <p>
 
-Projet éducatif autour de Sketchware Pro,
-du développement Android et de
-l'apprentissage pratique.
+Projet éducatif consacré à l'apprentissage
+du développement Android et à l'utilisation
+de Sketchware Pro.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Android
-</span>
-
-<span class="tech-chip">
-Java
-</span>
-
-<span class="tech-chip">
-Education
-</span>
-
-</div>
-
-
-<div class="project-actions">
-
-<a
-    href="#technology"
-    class="project-button primary"
->
-
-<span class="material-symbols-outlined">
-code
-</span>
-
-Technologies
-
-</a>
+<span class="tech-chip">Android</span>
+<span class="tech-chip">Java</span>
+<span class="tech-chip">Education</span>
 
 </div>
 
 </article>
 
 
-<!-- BizPlus -->
+<!-- =====================================================
+     BIZPLUS
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -2743,7 +2429,6 @@ business
 
 </div>
 
-
 <div class="status development">
 
 <span class="material-symbols-outlined">
@@ -2756,68 +2441,37 @@ En développement
 
 </div>
 
-
 <span class="project-tag">
-Business
+Business • Mobile
 </span>
-
 
 <h3>
 BizPlus
 </h3>
 
-
 <p>
 
-Écosystème orienté vers les entreprises,
-les produits et les services numériques,
+Écosystème destiné aux entreprises,
+aux produits et aux services numériques
 avec une approche moderne et accessible.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Android
-</span>
-
-<span class="tech-chip">
-Firebase
-</span>
-
-<span class="tech-chip">
-Cloudinary
-</span>
-
-<span class="tech-chip">
-Material 3
-</span>
-
-</div>
-
-
-<div class="project-actions">
-
-<a
-    href="#contact"
-    class="project-button primary"
->
-
-<span class="material-symbols-outlined">
-arrow_forward
-</span>
-
-Découvrir
-
-</a>
+<span class="tech-chip">Android</span>
+<span class="tech-chip">Firebase</span>
+<span class="tech-chip">Cloudinary</span>
+<span class="tech-chip">Material 3</span>
 
 </div>
 
 </article>
 
 
-<!-- M3 -->
+<!-- =====================================================
+     GO STUDIO M3
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -2829,11 +2483,10 @@ Découvrir
 <div class="project-icon">
 
 <span class="material-symbols-outlined">
-developer_mode
+palette
 </span>
 
 </div>
-
 
 <div class="status experimental">
 
@@ -2846,65 +2499,37 @@ Expérimental
 </div>
 
 </div>
-
 
 <span class="project-tag">
 Android • UI
 </span>
 
-
 <h3>
 GO Studio M3
 </h3>
 
-
 <p>
 
-Expérimentation autour de composants,
-couleurs dynamiques, thèmes et expériences
+Expérimentations autour des couleurs,
+thèmes, composants et expériences
 inspirées de Material 3.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Java
-</span>
-
-<span class="tech-chip">
-Material 3
-</span>
-
-<span class="tech-chip">
-Android
-</span>
-
-</div>
-
-
-<div class="project-actions">
-
-<a
-    href="#labs"
-    class="project-button primary"
->
-
-<span class="material-symbols-outlined">
-science
-</span>
-
-GO Labs
-
-</a>
+<span class="tech-chip">Java</span>
+<span class="tech-chip">Android</span>
+<span class="tech-chip">Material 3</span>
 
 </div>
 
 </article>
 
 
-<!-- GO Studio Utils -->
+<!-- =====================================================
+     GO STUDIO UTILS
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -2921,7 +2546,6 @@ code
 
 </div>
 
-
 <div class="status experimental">
 
 <span class="material-symbols-outlined">
@@ -2934,64 +2558,36 @@ Expérimental
 
 </div>
 
-
 <span class="project-tag">
 Developer Tools
 </span>
-
 
 <h3>
 GO Studio Utils
 </h3>
 
-
 <p>
 
-Collection de composants et utilitaires
+Collection de classes, composants et utilitaires
 destinés à faciliter le développement
 d'applications Android.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Java
-</span>
-
-<span class="tech-chip">
-Android
-</span>
-
-<span class="tech-chip">
-Sketchware
-</span>
-
-</div>
-
-
-<div class="project-actions">
-
-<a
-    href="#technology"
-    class="project-button primary"
->
-
-<span class="material-symbols-outlined">
-code
-</span>
-
-Technologies
-
-</a>
+<span class="tech-chip">Java</span>
+<span class="tech-chip">Android</span>
+<span class="tech-chip">Sketchware</span>
 
 </div>
 
 </article>
 
 
-<!-- NutriApp -->
+<!-- =====================================================
+     NUTRIAPP
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -3003,11 +2599,10 @@ Technologies
 <div class="project-icon">
 
 <span class="material-symbols-outlined">
-science
+restaurant
 </span>
 
 </div>
-
 
 <div class="status development">
 
@@ -3021,63 +2616,36 @@ En évolution
 
 </div>
 
-
 <span class="project-tag">
 Nutrition • Mobile
 </span>
-
 
 <h3>
 NutriApp
 </h3>
 
-
 <p>
 
 Projet mobile orienté vers l'information
-nutritionnelle et l'expérience utilisateur.
+nutritionnelle et une expérience moderne
+sur Android.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Kotlin
-</span>
-
-<span class="tech-chip">
-Supabase
-</span>
-
-<span class="tech-chip">
-Android
-</span>
-
-</div>
-
-
-<div class="project-actions">
-
-<a
-    href="#contact"
-    class="project-button"
->
-
-<span class="material-symbols-outlined">
-arrow_forward
-</span>
-
-Projet
-
-</a>
+<span class="tech-chip">Kotlin</span>
+<span class="tech-chip">Supabase</span>
+<span class="tech-chip">Android</span>
 
 </div>
 
 </article>
 
 
-<!-- Status Saver -->
+<!-- =====================================================
+     STATUS SAVER
+===================================================== -->
 
 <article
     class="project-card reveal"
@@ -3094,7 +2662,6 @@ download
 
 </div>
 
-
 <div class="status published">
 
 <span class="material-symbols-outlined">
@@ -3107,57 +2674,27 @@ Concrétisé
 
 </div>
 
-
 <span class="project-tag">
 Utility • Android
 </span>
-
 
 <h3>
 Status Saver
 </h3>
 
-
 <p>
 
-Application utilitaire Android conçue
-autour de la gestion et de la sauvegarde
-de contenus de statut.
+Application utilitaire Android orientée
+vers la gestion et la sauvegarde de contenus
+de statut.
 
 </p>
 
-
 <div class="project-techs">
 
-<span class="tech-chip">
-Android
-</span>
-
-<span class="tech-chip">
-Java
-</span>
-
-<span class="tech-chip">
-SAF
-</span>
-
-</div>
-
-
-<div class="project-actions">
-
-<a
-    href="#contact"
-    class="project-button primary"
->
-
-<span class="material-symbols-outlined">
-arrow_forward
-</span>
-
-Projet
-
-</a>
+<span class="tech-chip">Android</span>
+<span class="tech-chip">Java</span>
+<span class="tech-chip">SAF</span>
 
 </div>
 
@@ -3172,10 +2709,10 @@ Projet
 <span id="projectCount">
 9
 </span>
+
 projets affichés
 
 </div>
-
 
 </div>
 
@@ -3183,7 +2720,7 @@ projets affichés
 
 
 <!-- =====================================================
-     AI
+     LUNARIS AI
 ===================================================== -->
 
 <section class="section">
@@ -3192,44 +2729,42 @@ projets affichés
 
 <div class="feature reveal">
 
-
 <div>
 
 <span class="section-label">
 GO Studio AI
 </span>
 
-
 <h3>
-Explorer l'intelligence artificielle
-pour créer de nouvelles expériences.
+L'intelligence artificielle
+au cœur de nouvelles expériences.
 </h3>
-
 
 <p>
 
-Lunaris AI et les autres expérimentations
-IA de GO Studio représentent une partie
-importante de notre évolution technologique.
+Avec Lunaris AI et différentes expérimentations,
+GO Studio explore progressivement de nouvelles
+façons d'intégrer l'intelligence artificielle
+dans ses projets.
 
 </p>
 
-
 <a
-    href="#labs"
+    href="https://alainsmubbanji.github.io/MotivPlus-/Docs/Lunaris%20AI/"
+    target="_blank"
+    rel="noopener"
     class="btn primary"
 >
 
 <span class="material-symbols-outlined">
-auto_awesome
+smart_toy
 </span>
 
-Explorer GO Studio AI
+Explorer Lunaris AI
 
 </a>
 
 </div>
-
 
 <div class="feature-visual">
 
@@ -3238,7 +2773,6 @@ smart_toy
 </span>
 
 </div>
-
 
 </div>
 
@@ -3258,7 +2792,6 @@ smart_toy
 
 <div class="container">
 
-
 <div class="section-header reveal">
 
 <span class="section-label">
@@ -3266,13 +2799,13 @@ Stack
 </span>
 
 <h2 class="section-title">
-Les technologies derrière nos projets
+Technologies
 </h2>
 
 <p class="section-description">
 
-Une stack adaptée aux besoins de chaque
-application et de chaque expérimentation.
+Les technologies utilisées pour transformer
+les idées GO Studio en projets fonctionnels.
 
 </p>
 
@@ -3281,92 +2814,60 @@ application et de chaque expérimentation.
 
 <div class="tech-grid">
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
-developer_mode
+phone_android
 </span>
-
 Android
-
 </div>
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
 code
 </span>
-
 Java
-
 </div>
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
 code
 </span>
-
 Kotlin
-
 </div>
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
-terminal
+database
 </span>
-
 Firebase
-
 </div>
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
-auto_awesome
+smart_toy
 </span>
-
 AI / API
-
 </div>
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
 language
 </span>
-
 Web
-
 </div>
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
-developer_mode
+palette
 </span>
-
 Material 3
-
 </div>
 
-
 <div class="tech reveal">
-
 <span class="material-symbols-outlined">
-storefront
+cloud
 </span>
-
-Cloudinary
-
+Cloud
 </div>
 
 </div>
@@ -3387,9 +2888,7 @@ Cloudinary
 
 <div class="container">
 
-
 <div class="labs reveal">
-
 
 <div class="section-header"
      style="margin-bottom:0;">
@@ -3398,16 +2897,14 @@ Cloudinary
 GO Studio Labs
 </span>
 
-
 <h2 class="section-title">
 L'endroit où les prochaines idées commencent.
 </h2>
 
-
 <p class="section-description">
 
 Les Labs regroupent les expérimentations
-qui peuvent devenir de futurs projets.
+qui peuvent devenir de futurs projets GO Studio.
 
 </p>
 
@@ -3416,20 +2913,19 @@ qui peuvent devenir de futurs projets.
 
 <div class="lab-grid">
 
-
 <div class="lab-item">
 
 <span class="material-symbols-outlined">
-auto_awesome
+smart_toy
 </span>
 
 <strong>
-IA
+Intelligence artificielle
 </strong>
 
 <p>
 Tester de nouvelles expériences
-avec l'intelligence artificielle.
+avec l'IA.
 </p>
 
 </div>
@@ -3438,7 +2934,7 @@ avec l'intelligence artificielle.
 <div class="lab-item">
 
 <span class="material-symbols-outlined">
-developer_mode
+phone_android
 </span>
 
 <strong>
@@ -3456,7 +2952,7 @@ composants Android.
 <div class="lab-item">
 
 <span class="material-symbols-outlined">
-lightbulb
+palette
 </span>
 
 <strong>
@@ -3483,9 +2979,90 @@ Prototypes
 
 <p>
 Transformer rapidement une idée
-en prototype fonctionnel.
+en prototype.
 </p>
 
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-label">
+GO Studio
+</span>
+
+<h2 class="section-title">
+Notre écosystème
+</h2>
+
+</div>
+
+
+<div class="stats-grid">
+
+<div class="stat reveal">
+
+<div class="stat-number">
+10+
+</div>
+
+<div class="stat-label">
+Applications & projets
+</div>
+
+</div>
+
+
+<div class="stat reveal">
+
+<div class="stat-number">
+AI
+</div>
+
+<div class="stat-label">
+Intelligence artificielle
+</div>
+
+</div>
+
+
+<div class="stat reveal">
+
+<div class="stat-number">
+M3
+</div>
+
+<div class="stat-label">
+Design system
+</div>
+
+</div>
+
+
+<div class="stat reveal">
+
+<div class="stat-number">
+∞
+</div>
+
+<div class="stat-label">
+Nouvelles idées
 </div>
 
 </div>
@@ -3508,24 +3085,21 @@ en prototype fonctionnel.
 
 <div class="container">
 
-
 <div class="section-header reveal">
 
 <span class="section-label">
-GO Studio
+Notre vision
 </span>
-
 
 <h2 class="section-title">
 Créer. Innover. Inspirer.
 </h2>
 
-
 <p class="section-description">
 
-Notre objectif est de construire
-progressivement un écosystème de projets
-numériques utiles, modernes et accessibles.
+Construire progressivement un écosystème
+de projets numériques utiles, modernes
+et accessibles.
 
 </p>
 
@@ -3533,7 +3107,6 @@ numériques utiles, modernes et accessibles.
 
 
 <div class="values">
-
 
 <div class="value reveal">
 
@@ -3555,7 +3128,7 @@ Transformer une idée en projet concret.
 <div class="value reveal">
 
 <span class="material-symbols-outlined">
-bolt
+auto_awesome
 </span>
 
 <h3>
@@ -3581,7 +3154,8 @@ Inspirer
 </h3>
 
 <p>
-Donner envie d'apprendre et de construire.
+Donner envie d'apprendre
+et de construire.
 </p>
 
 </div>
@@ -3591,7 +3165,6 @@ Donner envie d'apprendre et de construire.
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -3605,7 +3178,6 @@ Donner envie d'apprendre et de construire.
 
 <div class="container">
 
-
 <div class="section-header reveal">
 
 <span class="section-label">
@@ -3618,8 +3190,8 @@ Un studio qui continue d'évoluer
 
 <p class="section-description">
 
-Chaque projet apporte une nouvelle
-expérience et de nouvelles connaissances.
+Chaque projet apporte une nouvelle expérience
+et de nouvelles connaissances.
 
 </p>
 
@@ -3661,14 +3233,14 @@ projets numériques.
 </span>
 
 <h3>
-Création de l'écosystème GO
+Écosystème GO Studio
 </h3>
 
 <p>
 
-Développement progressif de plusieurs
-applications et outils autour d'une
-même identité.
+Création progressive de plusieurs
+applications et outils autour
+d'une même identité.
 
 </p>
 
@@ -3689,8 +3261,8 @@ Exploration de l'IA
 
 <p>
 
-Intégration de l'intelligence artificielle
-dans de nouvelles expériences comme
+Développement de nouvelles expériences
+d'intelligence artificielle avec
 Lunaris AI.
 
 </p>
@@ -3720,12 +3292,12 @@ en produits numériques.
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =====================================================
      CONTACT
@@ -3738,26 +3310,22 @@ en produits numériques.
 
 <div class="container">
 
-
 <div class="cta reveal">
-
 
 <h2>
 Une idée ? Construisons-la.
 </h2>
 
-
 <p>
 
 GO Studio continue d'évoluer.
-Les collaborations, idées et nouveaux
-projets font partie de cette évolution.
+Les nouvelles idées et les nouveaux projets
+font partie de cette évolution.
 
 </p>
 
 
 <div class="hero-buttons">
-
 
 <a
     href="https://t.me/GoStudioLLC"
@@ -3806,7 +3374,6 @@ Email
 
 <footer>
 
-
 <div class="footer-logo">
 
 <span>GO</span>
@@ -3819,6 +3386,8 @@ Studio
 
 Créer • Innover • Inspirer
 
+<br>
+
 GO Studio LLC — applications,
 intelligence artificielle et
 expérimentation numérique.
@@ -3827,7 +3396,6 @@ expérimentation numérique.
 
 
 <div class="footer-links">
-
 
 <a href="#projects">
 
@@ -3843,10 +3411,21 @@ Projets
 <a href="#technology">
 
 <span class="material-symbols-outlined">
-developer_mode
+code
 </span>
 
 Technologies
+
+</a>
+
+
+<a href="#labs">
+
+<span class="material-symbols-outlined">
+science
+</span>
+
+Labs
 
 </a>
 
@@ -3903,7 +3482,6 @@ GO Studio LLC — Tous droits réservés.
 
 </div>
 
-
 </footer>
 
 
@@ -3913,33 +3491,23 @@ GO Studio LLC — Tous droits réservés.
 
 <script>
 
-
 /* =====================================================
    THEME
 ===================================================== */
 
 const themeButton =
-    document.getElementById(
-        "themeButton"
-    );
+    document.getElementById("themeButton");
 
 const themeIcon =
-    document.getElementById(
-        "themeIcon"
-    );
-
+    document.getElementById("themeIcon");
 
 const savedTheme =
-    localStorage.getItem(
-        "go-studio-theme"
-    );
+    localStorage.getItem("go-studio-theme");
 
 
 if(savedTheme === "dark"){
 
-    document.body.classList.add(
-        "dark"
-    );
+    document.body.classList.add("dark");
 
     themeIcon.textContent =
         "light_mode";
@@ -3955,24 +3523,15 @@ themeButton.addEventListener(
     "click",
     function(){
 
-        document.body.classList.toggle(
-            "dark"
-        );
-
+        document.body.classList.toggle("dark");
 
         const dark =
-            document.body.classList.contains(
-                "dark"
-            );
-
+            document.body.classList.contains("dark");
 
         localStorage.setItem(
             "go-studio-theme",
-            dark
-                ? "dark"
-                : "light"
+            dark ? "dark" : "light"
         );
-
 
         themeIcon.textContent =
             dark
@@ -3988,19 +3547,13 @@ themeButton.addEventListener(
 ===================================================== */
 
 const menuButton =
-    document.getElementById(
-        "menuButton"
-    );
+    document.getElementById("menuButton");
 
 const menuIcon =
-    document.getElementById(
-        "menuIcon"
-    );
+    document.getElementById("menuIcon");
 
 const mobileMenu =
-    document.getElementById(
-        "mobileMenu"
-    );
+    document.getElementById("mobileMenu");
 
 
 menuButton.addEventListener(
@@ -4008,10 +3561,7 @@ menuButton.addEventListener(
     function(){
 
         const opened =
-            mobileMenu.classList.toggle(
-                "open"
-            );
-
+            mobileMenu.classList.toggle("open");
 
         menuIcon.textContent =
             opened
@@ -4031,9 +3581,7 @@ mobileMenu
                 "click",
                 function(){
 
-                    mobileMenu.classList.remove(
-                        "open"
-                    );
+                    mobileMenu.classList.remove("open");
 
                     menuIcon.textContent =
                         "menu";
@@ -4050,33 +3598,24 @@ mobileMenu
 ===================================================== */
 
 const filters =
-    document.querySelectorAll(
-        ".filter"
-    );
+    document.querySelectorAll(".filter");
 
 const projectCards =
-    document.querySelectorAll(
-        ".project-card"
-    );
+    document.querySelectorAll(".project-card");
 
 const projectCount =
-    document.getElementById(
-        "projectCount"
-    );
+    document.getElementById("projectCount");
 
 
 function updateProjectCount(){
 
     let visible = 0;
 
-
     projectCards.forEach(
         card => {
 
             if(
-                !card.classList.contains(
-                    "hidden"
-                )
+                !card.classList.contains("hidden")
             ){
 
                 visible++;
@@ -4086,10 +3625,8 @@ function updateProjectCount(){
         }
     );
 
-
     projectCount.textContent =
         visible;
-
 }
 
 
@@ -4103,18 +3640,12 @@ filters.forEach(
                 filters.forEach(
                     item => {
 
-                        item.classList.remove(
-                            "active"
-                        );
+                        item.classList.remove("active");
 
                     }
                 );
 
-
-                this.classList.add(
-                    "active"
-                );
-
+                this.classList.add("active");
 
                 const selected =
                     this.dataset.filter;
@@ -4132,15 +3663,11 @@ filters.forEach(
                             selected === status
                         ){
 
-                            card.classList.remove(
-                                "hidden"
-                            );
+                            card.classList.remove("hidden");
 
                         }else{
 
-                            card.classList.add(
-                                "hidden"
-                            );
+                            card.classList.add("hidden");
 
                         }
 
@@ -4165,9 +3692,7 @@ updateProjectCount();
 ===================================================== */
 
 const revealElements =
-    document.querySelectorAll(
-        ".reveal"
-    );
+    document.querySelectorAll(".reveal");
 
 
 const observer =
@@ -4204,9 +3729,7 @@ const observer =
 revealElements.forEach(
     element => {
 
-        observer.observe(
-            element
-        );
+        observer.observe(element);
 
     }
 );
@@ -4216,9 +3739,8 @@ revealElements.forEach(
    YEAR
 ===================================================== */
 
-document.getElementById(
-    "year"
-).textContent =
+document.getElementById("year")
+    .textContent =
     new Date().getFullYear();
 
 
@@ -4230,13 +3752,9 @@ document.addEventListener(
     "keydown",
     function(event){
 
-        if(
-            event.key === "Escape"
-        ){
+        if(event.key === "Escape"){
 
-            mobileMenu.classList.remove(
-                "open"
-            );
+            mobileMenu.classList.remove("open");
 
             menuIcon.textContent =
                 "menu";
@@ -4247,7 +3765,6 @@ document.addEventListener(
 );
 
 </script>
-
 
 </body>
 </html>
