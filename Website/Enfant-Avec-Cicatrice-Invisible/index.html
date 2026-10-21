@@ -1,1 +1,939 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3ec">
+
+  <title>Enfant Avec Cicatrice Invisible — Plam's ILUKAM | GO Studio</title>
+  <meta name="description" content="Découvrez Enfant Avec Cicatrice Invisible, le livre de poésie et de slam de Plam's ILUKAM. Présentation du livre, de l'auteur et contact WhatsApp.">
+  <meta name="author" content="Plam's ILUKAM">
+  <meta name="publisher" content="GO Studio LLC">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="keywords" content="Enfant Avec Cicatrice Invisible, Plam's ILUKAM, poésie congolaise, slam congolais, livre de poésie, littérature congolaise, poésie et résilience, GO Studio LLC">
+
+  <!-- Remplacer par l'URL réelle après publication -->
+  <link rel="canonical" href="https://VOTRE-UTILISATEUR.github.io/VOTRE-DEPOT/">
+
+  <!-- Aperçu lors du partage sur les réseaux sociaux -->
+  <meta property="og:type" content="book">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="GO Studio LLC">
+  <meta property="og:title" content="Enfant Avec Cicatrice Invisible — Plam's ILUKAM">
+  <meta property="og:description" content="Une voix qui ose dire ce que d'autres taisent. Découvrez ce livre de poésie et de slam.">
+  <meta property="og:image" content="cover.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Enfant Avec Cicatrice Invisible",
+    "author": {
+      "@type": "Person",
+      "name": "Plam's ILUKAM"
+    },
+    "inLanguage": "fr",
+    "genre": ["Poésie", "Slam"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "GO Studio LLC",
+      "url": "https://alainsmubbanji.github.io/GO-Studio/"
+    },
+    "description": "Un livre de poésie et de slam autour des blessures invisibles, du silence, de la résilience et de la gentillesse."
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8f3ec;
+      --surface: #fffdf9;
+      --surface2: #efe5da;
+      --text: #2c201d;
+      --muted: #71615b;
+      --primary: #783e43;
+      --primaryHover: #5e2e34;
+      --onPrimary: #fff9f5;
+      --accent: #c08b55;
+      --border: #e3d5c9;
+      --shadow: 0 20px 55px rgba(68,39,34,.10);
+      --radius: 26px;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #191413;
+      --surface: #251d1b;
+      --surface2: #342724;
+      --text: #f5e9e0;
+      --muted: #c7b4aa;
+      --primary: #e8adb0;
+      --primaryHover: #f3c4c6;
+      --onPrimary: #34191d;
+      --accent: #e6b47e;
+      --border: #4b3934;
+      --shadow: 0 20px 55px rgba(0,0,0,.24);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+      transition: background .25s, color .25s;
+    }
+
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 91%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--primary);
+      color: var(--onPrimary);
+      font: 700 24px "Playfair Display", serif;
+    }
+
+    .brand-copy { display: grid; line-height: 1.3; }
+    .brand-copy strong { font-size: 13px; }
+    .brand-copy small { color: var(--muted); font-size: 11px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+
+    .icon-btn, .menu-btn {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .menu-btn { display: none; font-size: 20px; }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 0 21px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--primary); color: var(--onPrimary); }
+    .btn-primary:hover { background: var(--primaryHover); }
+    .btn-secondary { background: var(--surface); color: var(--text); border-color: var(--border); }
+    .btn-small { min-height: 41px; padding: 0 15px; }
+
+    .hero { padding: 75px 0 70px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 23px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1, h2, h3, blockquote, .serif {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: clamp(43px, 5.5vw, 72px);
+      line-height: 1.08;
+      letter-spacing: -1.7px;
+    }
+
+    h1 em { color: var(--primary); font-weight: 500; }
+
+    .hero-lead {
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-author { color: var(--muted); font-size: 14px; margin: 25px 0; }
+    .hero-author strong { color: var(--text); }
+
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .hero-note {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-note span { color: var(--accent); font-size: 19px; }
+
+    .book-stage {
+      min-height: 480px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .book-stage::before {
+      content: "";
+      position: absolute;
+      width: min(430px, 100%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--surface2);
+      z-index: -1;
+    }
+
+    .book {
+      width: min(300px, 75%);
+      aspect-ratio: .68;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 26px;
+      color: #f8eee3;
+      background:
+        radial-gradient(ellipse at 80% 15%, rgba(213,164,111,.25), transparent 42%),
+        linear-gradient(145deg, #6f373d, #3d2428 60%, #24191a);
+      border-radius: 4px 14px 14px 4px;
+      border-left: 7px solid rgba(20,10,10,.3);
+      box-shadow: 20px 26px 38px rgba(38,20,20,.25);
+      transform: rotate(-4deg);
+    }
+
+    .book::after {
+      content: "";
+      position: absolute;
+      inset: 13px;
+      border: 1px solid rgba(233,194,147,.4);
+      pointer-events: none;
+    }
+
+    .book-kicker, .book-bottom {
+      position: relative;
+      z-index: 1;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e8c6a1;
+    }
+
+    .book-title {
+      position: relative;
+      z-index: 1;
+      font: 34px/1.1 "Playfair Display", serif;
+      margin: 25px 0;
+    }
+
+    .book-title span { color: #e9bd8c; font-style: italic; }
+
+    .book-art {
+      position: absolute;
+      top: 36%;
+      left: 25%;
+      width: 60%;
+      height: 30%;
+      border: 1px solid rgba(242,214,181,.35);
+      border-radius: 50%;
+      transform: rotate(25deg);
+    }
+
+    .floating-quote {
+      position: absolute;
+      right: -7px;
+      bottom: 40px;
+      max-width: 205px;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      font: 16px/1.5 "Playfair Display", serif;
+    }
+
+    .floating-quote small {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font: 10px "DM Sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    section { padding: 80px 0; }
+
+    .section-head { max-width: 720px; margin-bottom: 35px; }
+
+    .section-head h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.2;
+      margin: 14px 0;
+    }
+
+    .section-head p { color: var(--muted); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .quote-panel {
+      position: sticky;
+      top: 105px;
+      padding: 32px;
+      background: var(--primary);
+      color: var(--onPrimary);
+      border-radius: var(--radius);
+    }
+
+    .quote-mark { font: 70px Georgia, serif; line-height: .8; opacity: .7; }
+
+    .quote-panel blockquote {
+      margin: 22px 0;
+      font-size: 34px;
+      line-height: 1.3;
+    }
+
+    .quote-panel p { font-size: 12px; opacity: .85; }
+
+    .prose p { color: var(--muted); margin-bottom: 18px; }
+    .prose strong { color: var(--text); }
+    .prose .lead { color: var(--text); font: 23px/1.5 "Playfair Display", serif; }
+    .highlight { color: var(--primary) !important; font-weight: 700; }
+
+    .author-section { background: var(--surface2); }
+
+    .author-card {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 34px;
+      align-items: center;
+      padding: 40px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .author-monogram {
+      width: 150px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--surface2);
+      color: var(--primary);
+      font: 48px "Playfair Display", serif;
+      border: 1px solid var(--border);
+    }
+
+    .author-card h3 { font-size: 32px; margin: 10px 0; }
+    .author-card p { color: var(--muted); }
+
+    .author-note {
+      display: inline-flex;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: var(--bg);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .detail-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--surface);
+    }
+
+    .detail-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--surface2);
+      color: var(--primary);
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .detail-card h3 { font: 700 18px "DM Sans", sans-serif; }
+    .detail-card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+
+    .order-section { padding-top: 20px; }
+
+    .order-panel {
+      display: grid;
+      grid-template-columns: 1fr .85fr;
+      gap: 45px;
+      align-items: center;
+      padding: clamp(25px, 6vw, 60px);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+    }
+
+    .order-panel h2 { font-size: clamp(32px, 4vw, 46px); line-height: 1.2; }
+    .order-panel p { color: var(--muted); }
+
+    .contact-form { display: grid; gap: 14px; margin-top: 20px; }
+    .field { display: grid; gap: 7px; }
+    .field label { font-size: 13px; font-weight: 700; }
+
+    .field input, .field textarea {
+      width: 100%;
+      padding: 13px 15px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      outline: none;
+    }
+
+    .field input:focus, .field textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
+    }
+
+    .field textarea { min-height: 105px; resize: vertical; }
+    .form-hint { font-size: 12px; color: var(--muted); }
+
+    .price-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--surface);
+    }
+
+    .price-label {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .price-value { font: 34px "Playfair Display", serif; margin: 8px 0; }
+    .price-card .btn { width: 100%; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0; }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand { font: 700 20px "Playfair Display", serif; }
+    .footer-meta { color: var(--muted); font-size: 12px; }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; }
+    .footer-links a:hover { color: var(--primary); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .6s, transform .6s;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      z-index: 50;
+      width: max-content;
+      max-width: calc(100% - 30px);
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--text);
+      color: var(--bg);
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 15px);
+      transition: .2s;
+    }
+
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 850px) {
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: 12px; }
+      .hero-grid { gap: 25px; }
+      .book-stage { min-height: 410px; }
+      .about-grid { gap: 25px; }
+      .order-panel { gap: 25px; }
+    }
+
+    @media (max-width: 680px) {
+      .container { width: calc(100% - 28px); }
+      .nav { min-height: 68px; }
+      .brand-mark { width: 38px; height: 38px; }
+      .brand-copy strong { font-size: 11px; }
+      .brand-copy small { font-size: 10px; }
+      .nav-actions > .btn { display: none; }
+      .menu-btn { display: grid; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 14px;
+        right: 14px;
+        padding: 10px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open { display: grid; gap: 0; }
+      .nav-links a { padding: 12px; font-size: 14px; border-radius: 10px; }
+      .nav-links a:hover { background: var(--surface2); }
+
+      .hero { padding: 42px 0 50px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(42px, 12vw, 60px); }
+      .hero-lead { font-size: 17px; }
+      .book-stage { min-height: 390px; }
+      .book { width: 245px; }
+      .book-title { font-size: 31px; }
+      .floating-quote { right: 0; bottom: 14px; max-width: 175px; }
+
+      section { padding: 58px 0; }
+      .about-grid { grid-template-columns: 1fr; }
+      .quote-panel { position: static; }
+      .author-card { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 26px; gap: 20px; }
+      .author-monogram { width: 120px; font-size: 40px; }
+      .details-grid { grid-template-columns: 1fr; }
+      .detail-card { display: grid; grid-template-columns: 46px 1fr; column-gap: 15px; }
+      .detail-icon { grid-row: span 2; margin-bottom: 0; }
+      .detail-card h3 { margin: 3px 0 4px; }
+      .order-panel { grid-template-columns: 1fr; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#accueil" aria-label="Accueil">
+      <span class="brand-mark">C</span>
+      <span class="brand-copy">
+        <strong>Enfant Avec Cicatrice Invisible</strong>
+        <small>Plam's ILUKAM · Avec GO Studio LLC</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Navigation">
+      <a href="#livre">Le livre</a>
+      <a href="#auteur">L'auteur</a>
+      <a href="#details">Informations</a>
+      <a href="#commander">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Changer de thème" title="Changer de thème">☾</button>
+      <a class="btn btn-primary btn-small" href="#commander">Découvrir ↗</a>
+      <button class="menu-btn" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Poésie · Slam · Émotions</span>
+        <h1>Il y a des blessures que <em>les yeux ne voient pas.</em></h1>
+        <p class="hero-lead">Un livre qui donne une voix aux silences, aux blessures intérieures et à la force de continuer à avancer.</p>
+        <p class="hero-author">Un livre écrit par <strong>Plam's ILUKAM</strong></p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#livre">Explorer le livre ↓</a>
+          <a class="btn btn-secondary" href="#commander">Prix & contact</a>
+        </div>
+        <div class="hero-note"><span>✦</span> Des mots sincères. Une voix qui refuse de se taire.</div>
+      </div>
+
+      <div class="book-stage reveal" aria-label="Maquette décorative de la couverture">
+        <!-- Remplacer cette maquette par la vraie couverture du livre si disponible -->
+        <div class="book">
+          <div class="book-kicker">Poésie & slam</div>
+          <div class="book-art" aria-hidden="true"></div>
+          <div class="book-title">Enfant<br>Avec<br><span>Cicatrice</span><br>Invisible</div>
+          <div class="book-bottom">Plam's ILUKAM</div>
+        </div>
+        <div class="floating-quote">
+          « Même dans le silence, une voix peut se lever et briller. »
+          <small>L'esprit du livre</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="livre">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">À propos du livre</span>
+        <h2>Des mots pour dire ce que l'on garde en soi.</h2>
+        <p>Un univers de poésie et de slam où les émotions deviennent des mots et où les silences trouvent leur voix.</p>
+      </div>
+
+      <div class="about-grid">
+        <aside class="quote-panel reveal">
+          <div class="quote-mark">“</div>
+          <blockquote>Mais j’ai refusé de me taire.</blockquote>
+          <p>Une phrase qui résume l'élan de cette œuvre.</p>
+        </aside>
+
+        <div class="prose reveal">
+          <p class="lead">Avant de parler, j’ai longtemps écouté.</p>
+          <p>J’ai grandi dans un monde où les cœurs battent sans toujours parvenir à exprimer ce qu’ils ressentent, où les blessures se cachent derrière les sourires et où les rêves s’effacent parfois face à une réalité trop brutale.</p>
+          <p>Mais j’ai refusé de me taire.</p>
+          <p><strong>Enfant Avec Cicatrice Invisible</strong> n’est pas simplement un recueil de textes. C’est un morceau de moi, une voix qui ose dire ce que d’autres taisent, des cris que j’ai fait rimer pour leur donner un sens.</p>
+          <p>Je ne suis pas un héros. Je suis un survivant, un frère, un croyant, un poète, un slameur.</p>
+          <p>À travers ces pages, je partage mes émotions, mes silences, ma vision du monde et ma foi dans le pouvoir de la gentillesse. Oui, la gentillesse, cette force parfois oubliée, mais capable de toucher les cœurs.</p>
+          <p>Le slam et la poésie ne sont pas réservés à quelques personnes. La poésie, c’est l’âme qui parle à travers vous. Alors, écrivez, déclamez, exprimez-vous. N’attendez pas d’être parfaits pour commencer. Le monde a besoin de vos émotions, de votre voix et de votre vision.</p>
+          <p>Si vous vous sentez appelés, suivez cet appel. Vous ne pourrez pas plaire à tout le monde, et ce n’est pas une raison pour renoncer.</p>
+          <p class="highlight">Car même dans le silence, une voix peut se lever et briller.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="author-section" id="auteur">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Rencontrer la plume</span>
+        <h2>À propos de l'auteur</h2>
+        <p>Une première présentation, en attendant la biographie officielle.</p>
+      </div>
+
+      <article class="author-card reveal">
+        <div class="author-monogram" aria-hidden="true">PI</div>
+        <div>
+          <span class="eyebrow">L'auteur</span>
+          <h3>Plam's ILUKAM</h3>
+          <p>À travers <em>Enfant Avec Cicatrice Invisible</em>, Plam's ILUKAM explore la poésie et le slam comme des espaces d'expression des émotions, des expériences humaines et des réalités que l'on garde parfois enfouies en soi.</p>
+          <p>Cette page présente son livre. Sa biographie complète, son parcours et ses autres réalisations pourront être ajoutés lorsque les informations officielles seront disponibles.</p>
+          <span class="author-note">✦ Page de présentation du livre</span>
+          <p style="font-size:13px;margin-top:16px">Présentation web réalisée avec le soutien de <strong>GO Studio LLC</strong>.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">En un coup d'œil</span>
+        <h2>Informations sur le livre</h2>
+        <p>Les détails pratiques seront complétés dès qu'ils seront confirmés.</p>
+      </div>
+
+      <div class="details-grid">
+        <article class="detail-card reveal">
+          <div class="detail-icon">▤</div>
+          <h3>Genre littéraire</h3>
+          <p>Poésie et slam : des textes portés par les émotions, la réflexion et la voix.</p>
+        </article>
+        <article class="detail-card reveal">
+          <div class="detail-icon">✧</div>
+          <h3>Thèmes évoqués</h3>
+          <p>Silence, blessures invisibles, résilience, gentillesse, foi et expression de soi.</p>
+        </article>
+        <article class="detail-card reveal">
+          <div class="detail-icon">♡</div>
+          <h3>Prix & disponibilité</h3>
+          <p>Le prix, le format et la disponibilité sont à confirmer. Contactez le responsable pour en savoir plus.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="order-section" id="commander">
+    <div class="container">
+      <div class="order-panel reveal">
+        <div>
+          <span class="eyebrow">Entrer en contact</span>
+          <h2>Envie d'en savoir plus sur le livre ?</h2>
+          <p>Contactez le responsable via WhatsApp pour demander le prix, vérifier la disponibilité ou connaître les modalités de commande.</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="field">
+              <label for="visitorName">Votre nom (facultatif)</label>
+              <input id="visitorName" name="visitorName" autocomplete="name" placeholder="Comment vous appeler ?">
+            </div>
+
+            <div class="field">
+              <label for="visitorMessage">Votre message</label>
+              <textarea id="visitorMessage" name="visitorMessage" required>Bonjour, je souhaite avoir des informations sur le livre « Enfant Avec Cicatrice Invisible » de Plam's ILUKAM. Pourriez-vous me communiquer le prix et les modalités de commande ?</textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Continuer sur WhatsApp ↗</button>
+            <p class="form-hint">WhatsApp s'ouvrira avec votre message prérempli. Vous pourrez le vérifier avant de l'envoyer.</p>
+          </form>
+        </div>
+
+        <aside class="price-card">
+          <div class="price-label">Prix du livre</div>
+          <div class="price-value">À confirmer</div>
+          <p style="color:var(--muted);font-size:13px">Le tarif officiel sera ajouté dès qu'il sera communiqué.</p>
+          <a class="btn btn-secondary" href="#contactForm" id="priceAsk">Demander le prix</a>
+          <hr style="border:0;border-top:1px solid var(--border);margin:24px 0">
+          <div class="price-label">Auteur</div>
+          <p style="font-weight:700;color:var(--text);margin:7px 0">Plam's ILUKAM</p>
+          <p style="font-size:13px;margin:0;color:var(--muted)">Poésie & slam</p>
+          <hr style="border:0;border-top:1px solid var(--border);margin:24px 0">
+          <div class="price-label">Présentation web</div>
+          <p style="font-weight:700;color:var(--text);margin:7px 0">GO Studio LLC</p>
+          <a href="https://alainsmubbanji.github.io/GO-Studio/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-size:13px">Découvrir GO Studio ↗</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>
+      <div class="footer-brand">Enfant Avec Cicatrice Invisible</div>
+      <div class="footer-meta">
+        Un livre de Plam's ILUKAM · <span id="year"></span><br>
+        Présentation web : <strong>GO Studio LLC</strong>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#livre">Le livre</a>
+      <a href="#auteur">L'auteur</a>
+      <a href="#commander">Contact</a>
+      <a href="https://alainsmubbanji.github.io/GO-Studio/" target="_blank" rel="noopener noreferrer">GO Studio</a>
+      <a href="#accueil">Retour en haut ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  // Numéro WhatsApp configuré au format international : sans +, espace ni tiret.
+  const WHATSAPP_NUMBER = "243857060747";
+
+  const themeToggle = document.getElementById("themeToggle");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  const toast = document.getElementById("toast");
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+    window.setTimeout(() => toast.classList.remove("show"), 3200);
+  }
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    const dark = theme === "dark";
+    themeToggle.textContent = dark ? "☀" : "☾";
+    themeToggle.setAttribute(
+      "aria-label",
+      dark ? "Activer le thème clair" : "Activer le thème sombre"
+    );
+  }
+
+  let savedTheme = "light";
+  try {
+    savedTheme = localStorage.getItem("book-theme") || "light";
+  } catch (_) {}
+
+  setTheme(savedTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const next =
+      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    try {
+      localStorage.setItem("book-theme", next);
+    } catch (_) {}
+  });
+
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.textContent = open ? "×" : "☰";
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    });
+  });
+
+  document.getElementById("contactForm").addEventListener("submit", event => {
+    event.preventDefault();
+
+    const name = document.getElementById("visitorName").value.trim();
+    const message = document.getElementById("visitorMessage").value.trim();
+
+    if (!/^\d{8,15}$/.test(WHATSAPP_NUMBER)) {
+      showToast("Le numéro WhatsApp doit être vérifié dans le code.");
+      return;
+    }
+
+    const fullMessage =
+      (name ? "Bonjour, je m'appelle " + name + ".\n\n" : "") + message;
+
+    const url =
+      "https://wa.me/" + WHATSAPP_NUMBER +
+      "?text=" + encodeURIComponent(fullMessage);
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+
+  document.getElementById("priceAsk").addEventListener("click", () => {
+    document.getElementById("visitorMessage").value =
+      "Bonjour, je souhaite connaître le prix et la disponibilité du livre « Enfant Avec Cicatrice Invisible » de Plam's ILUKAM.";
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      observer.observe(element);
+    });
+  } else {
+    document.querySelectorAll(".reveal").forEach(element => {
+      element.classList.add("visible");
+    });
+  }
+</script>
+</body>
+</html>
