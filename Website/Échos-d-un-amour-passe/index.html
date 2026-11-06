@@ -1,1 +1,3402 @@
 
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F5F0E8">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Échos d’un amour passé | Modeste Moke — Mod’afia</title>
+
+  <meta name="description"
+    content="Découvrez Échos d’un amour passé, un recueil poétique de Modeste Moke, dit Mod’afia. Commandez votre exemplaire à Lubumbashi, RDC.">
+
+  <meta name="keywords"
+    content="Échos d’un amour passé, Modeste Moke, Mod’afia, poésie congolaise, slam congolais, livre, Lubumbashi, RDC">
+
+  <meta name="author" content="Modeste Moke">
+  <meta name="robots" content="index, follow">
+  <meta name="application-name" content="Échos d’un amour passé">
+
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="Échos d’un amour passé — Mod’afia">
+  <meta property="og:description"
+    content="Un voyage poétique au cœur des souvenirs, de l'amour, des joies, des peines et des espoirs.">
+  <meta property="og:image" content="assets/images/couverture.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Échos d’un amour passé">
+  <meta name="twitter:description"
+    content="Un recueil poétique de Modeste Moke, dit Mod’afia.">
+  <meta name="twitter:image" content="assets/images/couverture.jpg">
+
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0"
+    rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Échos d’un amour passé",
+    "author": {
+      "@type": "Person",
+      "name": "Modeste Moke",
+      "alternateName": "Mod’afia"
+    },
+    "inLanguage": "fr",
+    "description": "Un recueil poétique explorant l'amour, les souvenirs, les joies, les peines, les espoirs et les regrets.",
+    "genre": ["Poésie", "Littérature", "Slam"],
+    "image": "assets/images/couverture.jpg"
+  }
+  </script>
+
+  <style>
+    /* =====================================================
+       01. DESIGN TOKENS — MATERIAL 3 EDITORIAL
+    ===================================================== */
+
+    :root {
+      color-scheme: light;
+
+      --font-body: "DM Sans", sans-serif;
+      --font-display: "Playfair Display", serif;
+
+      --primary: #514078;
+      --primary-hover: #423263;
+      --on-primary: #FFFFFF;
+      --primary-container: #E9DDF8;
+      --on-primary-container: #27183F;
+
+      --secondary: #665A79;
+      --secondary-container: #EDE3F4;
+
+      --tertiary: #C66A45;
+      --tertiary-hover: #A95333;
+      --tertiary-container: #F8DED2;
+
+      --background: #F5F0E8;
+      --surface: #FFFCF8;
+      --surface-1: #F8F4EE;
+      --surface-2: #EEE8E0;
+      --surface-3: #E8E0F0;
+
+      --text: #34313B;
+      --heading: #25232D;
+      --text-secondary: #625D68;
+      --text-muted: #827B86;
+
+      --border: #DED6CC;
+      --outline: #817889;
+
+      --success: #386B50;
+      --error: #BA1A1A;
+      --warning: #8A5A16;
+
+      --header-bg: rgba(255, 252, 248, .92);
+      --overlay: rgba(24, 19, 31, .58);
+
+      --radius-xs: 6px;
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-2xl: 36px;
+      --radius-full: 999px;
+
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --space-20: 80px;
+      --space-24: 96px;
+
+      --container: 1180px;
+      --page-padding: 24px;
+      --header-height: 76px;
+
+      --shadow-1: 0 2px 8px rgba(37, 35, 45, .05);
+      --shadow-2: 0 8px 24px rgba(37, 35, 45, .08);
+      --shadow-3: 0 18px 48px rgba(37, 35, 45, .12);
+      --shadow-book: 18px 24px 55px rgba(37, 35, 45, .22);
+
+      --transition-fast: 180ms ease;
+      --transition-normal: 280ms ease;
+      --transition-slow: 500ms ease;
+
+      --z-header: 100;
+      --z-menu: 110;
+      --z-toast: 200;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+
+      --primary: #D3BCEB;
+      --primary-hover: #E5D5F5;
+      --on-primary: #302044;
+      --primary-container: #514078;
+      --on-primary-container: #F0E5FF;
+
+      --secondary: #D1C2E0;
+      --secondary-container: #403849;
+
+      --tertiary: #F2B59B;
+      --tertiary-hover: #FFD0BD;
+      --tertiary-container: #633D30;
+
+      --background: #19171D;
+      --surface: #242129;
+      --surface-1: #2A2630;
+      --surface-2: #302C35;
+      --surface-3: #393343;
+
+      --text: #E8E0E9;
+      --heading: #F1EAF4;
+      --text-secondary: #C6BDC9;
+      --text-muted: #A39AA7;
+
+      --border: #49424E;
+      --outline: #A39AA7;
+
+      --success: #9DD4AC;
+      --error: #FFB4AB;
+      --warning: #EBC18B;
+
+      --header-bg: rgba(36, 33, 41, .94);
+      --overlay: rgba(0, 0, 0, .72);
+
+      --shadow-1: 0 2px 8px rgba(0, 0, 0, .15);
+      --shadow-2: 0 8px 24px rgba(0, 0, 0, .2);
+      --shadow-3: 0 18px 48px rgba(0, 0, 0, .3);
+      --shadow-book: 18px 24px 55px rgba(0, 0, 0, .45);
+    }
+
+    /* =====================================================
+       02. RESET AND GLOBAL
+    ===================================================== */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: var(--font-body);
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+      transition:
+        background var(--transition-normal),
+        color var(--transition-normal);
+    }
+
+    body,
+    button,
+    input,
+    textarea,
+    select {
+      font-family: var(--font-body);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-size: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    h1, h2, h3, h4, p {
+      margin-top: 0;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--heading);
+    }
+
+    h1, h2 {
+      font-family: var(--font-display);
+      line-height: 1.13;
+      font-weight: 700;
+    }
+
+    ::selection {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--tertiary);
+      outline-offset: 4px;
+    }
+
+    .material-symbols-rounded {
+      font-size: 22px;
+      line-height: 1;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 2 * var(--page-padding)));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding-block: 104px;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 17px;
+      color: var(--tertiary);
+      font-size: .76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      border-radius: 10px;
+      background: currentColor;
+    }
+
+    .section-title {
+      font-size: clamp(2.1rem, 5vw, 3.5rem);
+      margin-bottom: 18px;
+    }
+
+    .section-description {
+      max-width: 600px;
+      margin-inline: auto;
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+    }
+
+    .text-accent {
+      color: var(--tertiary);
+      font-style: italic;
+    }
+
+    .muted {
+      color: var(--text-secondary);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* =====================================================
+       03. BUTTONS
+    ===================================================== */
+
+    .btn {
+      min-height: 52px;
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-full);
+      font-size: .91rem;
+      font-weight: 700;
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+      box-shadow: var(--shadow-1);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      box-shadow: var(--shadow-2);
+    }
+
+    .btn-secondary {
+      background: var(--secondary-container);
+      color: var(--heading);
+    }
+
+    .btn-secondary:hover {
+      filter: brightness(.97);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border-color: var(--outline);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-container);
+    }
+
+    .btn-tertiary {
+      background: var(--tertiary);
+      color: #FFFFFF;
+    }
+
+    .btn-tertiary:hover {
+      background: var(--tertiary-hover);
+    }
+
+    .btn-block {
+      width: 100%;
+    }
+
+    .icon-button {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 50%;
+      color: var(--heading);
+      background: transparent;
+      transition: background var(--transition-fast);
+    }
+
+    .icon-button:hover {
+      background: var(--surface-2);
+    }
+
+    /* =====================================================
+       04. HEADER / NAVIGATION
+    ===================================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: var(--z-header);
+      height: var(--header-height);
+      background: var(--header-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+    }
+
+    .brand-symbol {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      color: #FFFFFF;
+      background: linear-gradient(145deg, #514078, #C66A45);
+      border-radius: 15px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--heading);
+    }
+
+    .brand-caption {
+      color: var(--text-muted);
+      font-size: .66rem;
+      letter-spacing: .06em;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link {
+      position: relative;
+      color: var(--text-secondary);
+      font-size: .85rem;
+      font-weight: 600;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary);
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      background: var(--tertiary);
+      border-radius: var(--radius-full);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-order-button {
+      min-height: 43px;
+      padding-inline: 19px;
+      font-size: .82rem;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* =====================================================
+       05. HERO
+    ===================================================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 110px;
+      background:
+        radial-gradient(
+          circle at 8% 15%,
+          var(--primary-container),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 90% 75%,
+          var(--tertiary-container),
+          transparent 29%
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      background: var(--surface);
+      color: var(--primary);
+      font-size: .76rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .hero-badge .material-symbols-rounded {
+      font-size: 18px;
+    }
+
+    .hero-title {
+      max-width: 720px;
+      font-size: clamp(3rem, 6vw, 5.7rem);
+      letter-spacing: -.055em;
+      margin-bottom: 24px;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-description {
+      max-width: 550px;
+      color: var(--text-secondary);
+      font-size: 1.08rem;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin-top: 36px;
+      color: var(--text-muted);
+      font-size: .82rem;
+    }
+
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-meta-item .material-symbols-rounded {
+      color: var(--tertiary);
+      font-size: 19px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 520px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      max-width: 100%;
+      border-radius: 50%;
+      background: var(--tertiary-container);
+      opacity: .7;
+      filter: blur(2px);
+    }
+
+    .book-cover-frame {
+      position: relative;
+      z-index: 2;
+      width: min(310px, 75%);
+      padding: 12px;
+      background: var(--surface);
+      border-radius: 9px;
+      box-shadow: var(--shadow-book);
+      transform: rotate(-5deg);
+      transition: transform var(--transition-slow);
+    }
+
+    .book-cover-frame:hover {
+      transform: rotate(0deg) translateY(-8px);
+    }
+
+    .book-cover {
+      width: 100%;
+      aspect-ratio: 3 / 4.3;
+      object-fit: cover;
+      background: var(--surface-2);
+      border-radius: 3px;
+    }
+
+    .book-placeholder {
+      aspect-ratio: 3 / 4.3;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #514078, #C66A45);
+      color: white;
+    }
+
+    .book-placeholder strong {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .floating-note {
+      position: absolute;
+      z-index: 3;
+      max-width: 210px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-2);
+    }
+
+    .floating-note .material-symbols-rounded {
+      color: var(--tertiary);
+      margin-bottom: 8px;
+    }
+
+    .floating-note p {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: .95rem;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--heading);
+    }
+
+    .note-one {
+      top: 55px;
+      left: -8px;
+      transform: rotate(-5deg);
+    }
+
+    .note-two {
+      right: -10px;
+      bottom: 65px;
+      transform: rotate(4deg);
+    }
+
+    /* =====================================================
+       06. QUOTE
+    ===================================================== */
+
+    ./* M3 EDITORIAL QUOTE CARD */
+
+.quote-section {
+  padding: 75px 0;
+  background: var(--background);
+}
+
+.quote-card {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 55px 65px;
+  overflow: hidden;
+  text-align: center;
+
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+
+  box-shadow: var(--shadow-1);
+}
+
+.quote-card-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+
+  border-radius: 22px;
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.quote-card-icon .material-symbols-rounded {
+  font-size: 34px;
+}
+
+.quote-text {
+  max-width: 760px;
+  margin: 0 auto 25px;
+
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: var(--on-primary-container);
+}
+
+.quote-divider {
+  width: 48px;
+  height: 3px;
+  margin: 0 auto 18px;
+  border-radius: var(--radius-full);
+  background: var(--tertiary);
+}
+
+.quote-author {
+  color: var(--on-primary-container);
+  opacity: .75;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .quote-card {
+    padding: 38px 23px;
+    border-radius: var(--radius-xl);
+  }
+}
+
+    /* =====================================================
+       07. BOOK PRESENTATION
+    ===================================================== */
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .book-visual {
+      position: relative;
+    }
+
+    .book-image-card {
+      padding: 20px;
+      border-radius: var(--radius-2xl);
+      background: var(--surface-2);
+    }
+
+    .book-image-card img {
+      width: min(100%, 340px);
+      aspect-ratio: 3 / 4.3;
+      object-fit: cover;
+      margin: auto;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-3);
+    }
+
+    .book-content h2 {
+      font-size: clamp(2.1rem, 4vw, 3.4rem);
+      margin-bottom: 22px;
+    }
+
+    .book-content p {
+      color: var(--text-secondary);
+      margin-bottom: 17px;
+    }
+
+    .book-label {
+      display: inline-block;
+      padding: 7px 13px;
+      border-radius: var(--radius-full);
+      background: var(--tertiary-container);
+      color: var(--tertiary);
+      font-size: .75rem;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .book-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .book-detail {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: var(--surface-1);
+    }
+
+    .book-detail span {
+      display: block;
+      color: var(--text-muted);
+      font-size: .74rem;
+      margin-bottom: 4px;
+    }
+
+    .book-detail strong {
+      color: var(--heading);
+      font-size: .9rem;
+    }
+
+    /* =====================================================
+       08. THEMES
+    ===================================================== */
+
+    .themes-section {
+      background: var(--surface-1);
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .theme-card {
+      padding: 32px 27px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal),
+        border-color var(--transition-normal);
+    }
+
+    .theme-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-2);
+    }
+
+    .theme-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 18px;
+      background: var(--primary-container);
+      color: var(--primary);
+    }
+
+    .theme-card:nth-child(2) .theme-icon {
+      background: var(--tertiary-container);
+      color: var(--tertiary);
+    }
+
+    .theme-card:nth-child(3) .theme-icon {
+      background: var(--secondary-container);
+      color: var(--secondary);
+    }
+
+    .theme-icon .material-symbols-rounded {
+      font-size: 27px;
+    }
+
+    .theme-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .theme-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: .9rem;
+    }
+    
+    .theme-card {
+  background: var(--surface);
+  color: var(--on-surface);
+}
+
+.theme-card h3 {
+  color: var(--on-surface);
+}
+
+.theme-card p {
+  color: var(--on-surface-variant);
+}
+
+.theme-icon {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+.theme-card:nth-child(2) .theme-icon {
+  background: var(--tertiary-container);
+  color: var(--on-tertiary-container);
+}
+
+.theme-card:nth-child(3) .theme-icon {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+    /* =====================================================
+       09. AUTHOR
+    ===================================================== */
+
+    .author-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .author-visual {
+      position: relative;
+    }
+
+    .author-image-frame {
+      padding: 15px;
+      background: var(--tertiary-container);
+      border-radius: 180px 180px 28px 28px;
+    }
+
+    .author-image-frame img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 165px 165px 18px 18px;
+      background: var(--surface-2);
+    }
+
+    .author-caption {
+      display: block;
+      margin-top: 16px;
+      color: var(--text-secondary);
+      text-align: center;
+      font-size: .8rem;
+    }
+
+    .author-content h2 {
+      font-size: clamp(2.1rem, 4vw, 3.3rem);
+      margin-bottom: 20px;
+    }
+
+    .author-content p {
+      color: var(--text-secondary);
+      margin-bottom: 17px;
+    }
+
+    .author-signature {
+      margin-top: 28px;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-style: italic;
+      color: var(--tertiary);
+    }
+
+    .author-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .social-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 0 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      background: var(--surface);
+      font-size: .83rem;
+      font-weight: 700;
+      transition: background var(--transition-fast);
+    }
+
+    .social-link:hover {
+      background: var(--surface-2);
+    }
+
+    /* =====================================================
+       10. ORDER SECTION
+    ===================================================== */
+
+    .order-section {
+      background: var(--surface-1);
+    }
+
+    .order-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .order-information {
+      padding: 35px;
+      border-radius: var(--radius-2xl);
+      background: var(--primary);
+      color: #FFFFFF;
+      position: sticky;
+      top: 100px;
+    }
+
+    .order-information h3 {
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .order-information p {
+      color: rgba(255, 255, 255, .76);
+    }
+
+    .order-price-card {
+      padding: 23px;
+      margin-block: 28px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .price-label {
+      display: block;
+      font-size: .77rem;
+      color: rgba(255, 255, 255, .7);
+      margin-bottom: 6px;
+    }
+
+    .price-value {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .price-description {
+      display: block;
+      margin-top: 7px;
+      font-size: .76rem;
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .order-benefits {
+      display: grid;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .order-benefits li {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      font-size: .86rem;
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .order-benefits .material-symbols-rounded {
+      color: #F2B59B;
+      font-size: 20px;
+    }
+
+    .order-notice {
+      padding: 15px;
+      margin-top: 25px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, .1);
+      color: rgba(255, 255, 255, .82);
+      font-size: .8rem;
+    }
+
+    .order-form-wrapper {
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-2xl);
+      background: var(--surface);
+      box-shadow: var(--shadow-1);
+    }
+
+    .form-heading {
+      margin-bottom: 27px;
+    }
+
+    .form-heading h3 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .form-heading p {
+      color: var(--text-secondary);
+      font-size: .88rem;
+      margin: 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 19px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: var(--heading);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .optional-label {
+      color: var(--text-muted);
+      font-weight: 400;
+      font-size: .75rem;
+    }
+
+    .form-control {
+      width: 100%;
+      min-height: 53px;
+      padding: 13px 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-1);
+      color: var(--text);
+      outline: none;
+      transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      background: var(--surface);
+      box-shadow: 0 0 0 3px var(--primary-container);
+    }
+
+    .form-control::placeholder {
+      color: var(--text-muted);
+      opacity: .85;
+    }
+
+    textarea.form-control {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-error {
+      min-height: 15px;
+      color: var(--error);
+      font-size: .73rem;
+    }
+
+    .form-control.is-invalid {
+      border-color: var(--error);
+    }
+
+    .is-hidden {
+      display: none !important;
+    }
+
+    .form-disclaimer {
+      margin: 18px 0;
+      color: var(--text-muted);
+      font-size: .75rem;
+      line-height: 1.6;
+    }
+
+    .order-submit {
+      width: 100%;
+      min-height: 56px;
+    }
+
+    .order-status {
+      display: none;
+      padding: 14px;
+      margin-top: 17px;
+      border-radius: var(--radius-md);
+      font-size: .82rem;
+      line-height: 1.5;
+    }
+
+    .order-status.is-visible {
+      display: block;
+    }
+
+    .order-status.error {
+      background: color-mix(in srgb, var(--error) 12%, transparent);
+      color: var(--error);
+    }
+
+    .order-status.success {
+      background: color-mix(in srgb, var(--success) 12%, transparent);
+      color: var(--success);
+    }
+
+    /* =====================================================
+       11. CONTACT
+    ===================================================== */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 28px 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      text-align: center;
+      transition: transform var(--transition-normal);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-icon {
+      width: 57px;
+      height: 57px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      border-radius: 19px;
+      background: var(--primary-container);
+      color: var(--primary);
+    }
+
+    .contact-card:nth-child(2) .contact-icon {
+      background: var(--tertiary-container);
+      color: var(--tertiary);
+    }
+
+    .contact-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 9px;
+    }
+
+    .contact-card p {
+      color: var(--text-secondary);
+      font-size: .84rem;
+      margin-bottom: 17px;
+    }
+
+    .contact-card a,
+    .contact-card button {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+
+    /* =====================================================
+       12. CTA
+    ===================================================== */
+
+    .cta-section {
+      padding: 70px 0;
+    }
+
+    .cta-content {
+      position: relative;
+      overflow: hidden;
+      padding: 65px 35px;
+      border-radius: var(--radius-2xl);
+      text-align: center;
+      color: #FFFFFF;
+      background: linear-gradient(125deg, #514078, #352947);
+    }
+
+    .cta-content::before,
+    .cta-content::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 50%;
+    }
+
+    .cta-content::before {
+      left: -110px;
+      top: -110px;
+    }
+
+    .cta-content::after {
+      right: -100px;
+      bottom: -130px;
+    }
+
+    .cta-content h2 {
+      position: relative;
+      z-index: 1;
+      color: #FFFFFF;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 15px;
+    }
+
+    .cta-content p {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,.77);
+    }
+
+    .cta-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* =====================================================
+       13. FOOTER
+    ===================================================== */
+
+    .site-footer {
+      padding: 65px 0 24px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 42px;
+    }
+
+    .footer-brand p {
+      max-width: 360px;
+      margin-top: 17px;
+      color: var(--text-secondary);
+      font-size: .85rem;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 18px;
+      font-size: .88rem;
+      font-weight: 800;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      width: fit-content;
+      color: var(--text-secondary);
+      font-size: .82rem;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: var(--tertiary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-top: 23px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: .77rem;
+    }
+
+    .footer-credit a {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    /* =====================================================
+       14. BACK TO TOP / TOAST
+    ===================================================== */
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 90;
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 17px;
+      background: var(--primary);
+      color: var(--on-primary);
+      box-shadow: var(--shadow-2);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all var(--transition-normal);
+    }
+
+    .back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .toast {
+      position: fixed;
+      z-index: var(--z-toast);
+      left: 50%;
+      bottom: 25px;
+      transform: translate(-50%, 20px);
+      max-width: calc(100% - 30px);
+      padding: 13px 20px;
+      border-radius: var(--radius-full);
+      background: var(--heading);
+      color: var(--surface);
+      font-size: .82rem;
+      box-shadow: var(--shadow-3);
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-normal);
+      text-align: center;
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
+    }
+
+    /* =====================================================
+       15. REVEAL ANIMATIONS
+    ===================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 700ms ease,
+        transform 700ms cubic-bezier(.2,.7,.2,1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 100ms; }
+    .reveal-delay-2 { transition-delay: 200ms; }
+    .reveal-delay-3 { transition-delay: 300ms; }
+
+    /* =====================================================
+       16. RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1050px) {
+      .nav-menu {
+        gap: 17px;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .book-grid,
+      .author-grid {
+        gap: 45px;
+      }
+
+      .order-layout {
+        grid-template-columns: .8fr 1.2fr;
+      }
+    }
+
+    @media (max-width: 850px) {
+      :root {
+        --header-height: 70px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-order-button {
+        display: none;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: calc(var(--header-height) + 8px);
+        left: 18px;
+        right: 18px;
+        z-index: var(--z-menu);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        background: var(--surface);
+        box-shadow: var(--shadow-3);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all var(--transition-normal);
+      }
+
+      .nav-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-link {
+        display: block;
+        padding: 13px 15px;
+        border-radius: var(--radius-md);
+      }
+
+      .nav-link:hover {
+        background: var(--surface-1);
+      }
+
+      .nav-link.active::after {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-title {
+        font-size: clamp(2.8rem, 7vw, 4.4rem);
+      }
+
+      .hero-visual {
+        min-height: 440px;
+      }
+
+      .floating-note {
+        max-width: 165px;
+      }
+
+      .book-grid,
+      .author-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .themes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .order-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .order-information {
+        position: static;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 620px) {
+      :root {
+        --page-padding: 18px;
+      }
+
+      .section {
+        padding-block: 75px;
+      }
+
+      .section-heading {
+        margin-bottom: 38px;
+      }
+
+      .hero {
+        padding: 60px 0 70px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.8rem, 12vw, 4.1rem);
+      }
+
+      .hero-description {
+        font-size: .98rem;
+      }
+
+      .hero-visual {
+        min-height: 430px;
+        margin-top: 15px;
+      }
+
+      .book-cover-frame {
+        width: min(265px, 70%);
+      }
+
+      .note-one {
+        left: 0;
+        top: 30px;
+      }
+
+      .note-two {
+        right: 0;
+        bottom: 25px;
+      }
+
+      .quote-section {
+        padding: 55px 20px;
+      }
+
+      .book-grid,
+      .author-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .book-visual {
+        max-width: 390px;
+        margin: auto;
+      }
+
+      .author-visual {
+        max-width: 360px;
+        margin: auto;
+      }
+
+      .themes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .theme-card {
+        padding: 26px;
+      }
+
+      .book-details {
+        gap: 10px;
+      }
+
+      .order-information,
+      .order-form-wrapper {
+        padding: 25px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-content {
+        padding: 50px 22px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 380px) {
+      :root {
+        --page-padding: 15px;
+      }
+
+      .brand-caption {
+        font-size: .6rem;
+      }
+
+      .brand-name {
+        font-size: .88rem;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-meta {
+        gap: 12px;
+      }
+
+      .order-information,
+      .order-form-wrapper {
+        padding: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="sr-only" href="#contenu">Aller au contenu principal</a>
+
+  <!-- ===================================================
+       HEADER
+  ==================================================== -->
+
+  <header class="site-header">
+    <div class="container navbar">
+
+      <a class="brand" href="#accueil" aria-label="Échos d’un amour passé, accueil">
+        <span class="brand-symbol">É</span>
+        <span class="brand-text">
+          <span class="brand-name">Échos d’un amour passé</span>
+          <span class="brand-caption">L'univers de Mod’afia</span>
+        </span>
+      </a>
+
+      <nav class="nav-menu" id="navigation-menu" aria-label="Navigation principale">
+        <a class="nav-link active" href="#accueil">Accueil</a>
+        <a class="nav-link" href="#livre">Le livre</a>
+        <a class="nav-link" href="#themes">Univers</a>
+        <a class="nav-link" href="#auteur">L'auteur</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="btn btn-primary nav-order-button" href="#commande">
+          Commander
+          <span class="material-symbols-rounded">arrow_forward</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" id="theme-toggle"
+          type="button" aria-label="Activer le thème sombre"
+          aria-pressed="false">
+          <span class="material-symbols-rounded" id="theme-icon">dark_mode</span>
+        </button>
+
+        <button class="icon-button menu-toggle" id="menu-toggle"
+          type="button" aria-label="Ouvrir le menu"
+          aria-expanded="false" aria-controls="navigation-menu">
+          <span class="material-symbols-rounded" id="menu-icon">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="material-symbols-rounded">auto_awesome</span>
+            Une œuvre poétique
+          </div>
+
+          <h1 class="hero-title">
+            Échos d’un
+            <span class="text-accent">amour passé.</span>
+          </h1>
+
+          <p class="hero-description">
+            Certaines histoires ne disparaissent jamais complètement.
+            Elles deviennent des souvenirs, des émotions et parfois
+            des mots que le temps ne parvient pas à effacer.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#commande" class="btn btn-primary">
+              Découvrir le livre
+              <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+
+            <a href="#livre" class="btn btn-outline">
+              Explorer l'univers
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="hero-meta-item">
+              <span class="material-symbols-rounded">edit_note</span>
+              Poésie & slam
+            </span>
+
+            <span class="hero-meta-item">
+              <span class="material-symbols-rounded">location_on</span>
+              Lubumbashi, RDC
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay-2">
+
+          <div class="floating-note note-one">
+            <span class="material-symbols-rounded">favorite</span>
+            <p>Les souvenirs ont parfois leur propre langage.</p>
+          </div>
+
+          <div class="book-cover-frame">
+            <img class="book-cover"
+              src="https://raw.githubusercontent.com/alainsmubbanji/GO-Studio/refs/heads/main/Website/%C3%89chos-d-un-amour-passe/Original%20%7E2.jpg"
+              alt="Couverture du livre Échos d’un amour passé"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+
+            <div class="book-placeholder" style="display:none">
+              <strong>Échos d’un amour passé</strong>
+            </div>
+          </div>
+
+          <div class="floating-note note-two">
+            <span class="material-symbols-rounded">auto_stories</span>
+            <p>Une offrande à la puissance des mots.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         QUOTE
+    ================================================== -->
+
+    <section class="quote-section">
+      <div class="container quote-inner reveal">
+        <span class="material-symbols-rounded quote-icon">format_quote</span>
+
+        <p class="quote-text">
+          « Entre l'amour qui construit et la douleur qui transforme,
+          les mots deviennent le refuge des souvenirs. »
+        </p>
+
+        <span class="quote-author">L'univers de l'œuvre</span>
+      </div>
+    </section>
+
+    <!-- =================================================
+         BOOK
+    ================================================== -->
+
+    <section class="section" id="livre">
+      <div class="container book-grid">
+
+        <div class="book-visual reveal">
+          <div class="book-image-card">
+            <img src="https://raw.githubusercontent.com/alainsmubbanji/GO-Studio/refs/heads/main/Website/%C3%89chos-d-un-amour-passe/Original%20%7E2.jpg"
+              alt="Couverture du recueil Échos d’un amour passé"
+              loading="lazy">
+          </div>
+        </div>
+
+        <div class="book-content reveal reveal-delay-1">
+
+          <span class="book-label">À propos de l'œuvre</span>
+
+          <h2>
+            Des mots qui donnent
+            <span class="text-accent">une voix aux émotions.</span>
+          </h2>
+
+          <p>
+            <strong>Échos d’un amour passé</strong> est un recueil
+            poétique qui invite le lecteur à traverser les différentes
+            dimensions de l'expérience humaine.
+          </p>
+
+          <p>
+            À travers des poèmes classiques et libres, l'œuvre explore
+            les souvenirs, les joies, les peines, les espoirs et les
+            regrets qui accompagnent les histoires humaines.
+          </p>
+
+          <p>
+            Elle met en lumière la dualité entre la pureté de l'amour
+            et l'obscurité de la haine, entre ce que l'on garde
+            précieusement et ce que l'on apprend à laisser derrière soi.
+          </p>
+
+          <p>
+            Ce recueil se présente comme une offrande à la puissance
+            des mots et à leur capacité de faire vivre les émotions.
+          </p>
+
+          <div class="book-details">
+            <div class="book-detail">
+              <span>Titre</span>
+              <strong>Échos d’un amour passé</strong>
+            </div>
+
+            <div class="book-detail">
+              <span>Auteur</span>
+              <strong>Modeste Moke</strong>
+            </div>
+
+            <div class="book-detail">
+              <span>Genre</span>
+              <strong>Poésie & littérature</strong>
+            </div>
+
+            <div class="book-detail">
+              <span>Signature</span>
+              <strong>Mod’afia</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         THEMES
+    ================================================== -->
+
+    <section class="section themes-section" id="themes">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">L'univers du recueil</span>
+
+          <h2 class="section-title">
+            Trois dimensions,
+            <span class="text-accent">une seule expérience.</span>
+          </h2>
+
+          <p class="section-description">
+            Des émotions qui se rencontrent, se confrontent
+            et donnent naissance à une réflexion poétique.
+          </p>
+        </div>
+
+        <div class="themes-grid">
+
+          <article class="theme-card reveal">
+            <div class="theme-icon">
+              <span class="material-symbols-rounded">favorite</span>
+            </div>
+
+            <h3>L'amour</h3>
+
+            <p>
+              La beauté des sentiments, les liens humains,
+              les souvenirs précieux et la profondeur
+              de l'attachement.
+            </p>
+          </article>
+
+          <article class="theme-card reveal reveal-delay-1">
+            <div class="theme-icon">
+              <span class="material-symbols-rounded">cloud</span>
+            </div>
+
+            <h3>La douleur</h3>
+
+            <p>
+              Les peines, les regrets, les blessures émotionnelles
+              et les contradictions qui accompagnent
+              certaines histoires.
+            </p>
+          </article>
+
+          <article class="theme-card reveal reveal-delay-2">
+            <div class="theme-icon">
+              <span class="material-symbols-rounded">wb_sunny</span>
+            </div>
+
+            <h3>L'espoir</h3>
+
+            <p>
+              La possibilité de grandir, de comprendre le passé
+              et de retrouver une nouvelle perspective
+              sur la vie.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         AUTHOR
+    ================================================== -->
+
+    <section class="section" id="auteur">
+      <div class="container author-grid">
+
+        <div class="author-visual reveal">
+          <div class="author-image-frame">
+            <img src="https://raw.githubusercontent.com/alainsmubbanji/GO-Studio/refs/heads/main/Website/%C3%89chos-d-un-amour-passe/IMG-20261105-WA0017.jpg"
+              alt="Portrait de Modeste Moke, dit Mod’afia"
+              loading="lazy"
+              onerror="this.style.opacity='.15'">
+          </div>
+
+          <span class="author-caption">
+            Modeste Moke — Mod’afia
+          </span>
+        </div>
+
+        <div class="author-content reveal reveal-delay-1">
+
+          <span class="eyebrow">Derrière les mots</span>
+
+          <h2>
+            Rencontrez
+            <span class="text-accent">l'auteur.</span>
+          </h2>
+
+          <p>
+            Modeste Moke, connu sous le nom de plume
+            <strong>Mod’afia</strong>, est un jeune poète et slameur
+            congolais originaire de Kalemie, dans la province
+            du Tanganyika.
+          </p>
+
+          <p>
+            Étudiant à la Faculté des Lettres et Sciences humaines
+            de l'Université de Lubumbashi, il développe son expression
+            littéraire à travers la poésie et le slam.
+          </p>
+
+          <p>
+            Son parcours s'inscrit également dans des cercles culturels,
+            scolaires et universitaires, ainsi que dans son engagement
+            au sein du groupe scout 3 Étoiles.
+          </p>
+
+          <p>
+            À travers ses écrits, il met en avant des valeurs
+            d'engagement, de solidarité et de fraternité.
+          </p>
+
+          <div class="author-signature">Mod’afia</div>
+
+          <div class="author-socials">
+
+            <a class="social-link"
+              href="https://www.facebook.com/share/1GzFmYdVfm/?mibextid=wwXIfr"
+              target="_blank" rel="noopener noreferrer"
+              data-social="facebook">
+              <span class="material-symbols-rounded">public</span>
+              Facebook
+            </a>
+
+            <a class="social-link"
+              href="https://www.tiktok.com/@modeste.moke?_r=1&_t=ZS-9B9sTmY5BqA"
+              target="_blank" rel="noopener noreferrer"
+              data-social="tiktok">
+              <span class="material-symbols-rounded">play_circle</span>
+              TikTok
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         ORDER
+    ================================================== -->
+
+    <section class="section order-section" id="commande">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Votre exemplaire</span>
+
+          <h2 class="section-title">
+            Faites entrer cette œuvre
+            <span class="text-accent">dans votre bibliothèque.</span>
+          </h2>
+
+          <p class="section-description">
+            Les commandes sont actuellement organisées
+            pour les lecteurs de Lubumbashi.
+          </p>
+        </div>
+
+        <div class="order-layout">
+
+          <aside class="order-information reveal">
+
+            <span class="eyebrow" style="color:#F2B59B">
+              Informations
+            </span>
+
+            <h3>Votre lecture commence ici.</h3>
+
+            <p>
+              Remplissez le formulaire pour préparer votre demande
+              de commande. Vous pourrez ensuite la transmettre
+              directement sur WhatsApp.
+            </p>
+
+            <div class="order-price-card">
+              <span class="price-label">Prix du livre</span>
+              <strong class="price-value">À confirmer</strong>
+              <span class="price-description">
+                Le prix sera communiqué lors de l'échange WhatsApp.
+              </span>
+            </div>
+
+            <ul class="order-benefits">
+              <li>
+                <span class="material-symbols-rounded">location_on</span>
+                Commandes actuellement à Lubumbashi.
+              </li>
+
+              <li>
+                <span class="material-symbols-rounded">local_shipping</span>
+                Livraison à domicile selon les modalités convenues.
+              </li>
+
+              <li>
+                <span class="material-symbols-rounded">storefront</span>
+                Possibilité de retrait à un point à convenir.
+              </li>
+
+              <li>
+                <span class="material-symbols-rounded">chat</span>
+                Confirmation directement avec le responsable.
+              </li>
+            </ul>
+
+            <div class="order-notice">
+              Cette demande ne constitue pas une confirmation
+              de commande. Les détails et le prix seront validés
+              avec le responsable sur WhatsApp.
+            </div>
+
+          </aside>
+
+          <div class="order-form-wrapper reveal reveal-delay-1">
+
+            <div class="form-heading">
+              <h3>Préparer ma commande</h3>
+              <p>
+                Les champs marqués d'un astérisque sont obligatoires.
+              </p>
+            </div>
+
+            <form id="order-form" novalidate>
+
+              <div class="form-grid">
+
+                <div class="form-group full">
+                  <label for="customer-name">
+                    Nom complet *
+                  </label>
+
+                  <input class="form-control"
+                    id="customer-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Votre nom complet"
+                    maxlength="100"
+                    required>
+
+                  <span class="form-error" id="name-error"></span>
+                </div>
+
+                <div class="form-group full">
+                  <label for="customer-phone">
+                    Numéro de téléphone *
+                  </label>
+
+                  <input class="form-control"
+                    id="customer-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="Ex. : 097 XXX XX XX"
+                    maxlength="25"
+                    required>
+
+                  <span class="form-error" id="phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="quantity">Quantité *</label>
+
+                  <input class="form-control"
+                    id="quantity"
+                    name="quantity"
+                    type="number"
+                    min="1"
+                    max="50"
+                    value="1"
+                    required>
+
+                  <span class="form-error" id="quantity-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="reception-mode">
+                    Réception *
+                  </label>
+
+                  <select class="form-control"
+                    id="reception-mode"
+                    name="mode"
+                    required>
+
+                    <option value="">Choisir</option>
+                    <option value="delivery">Livraison</option>
+                    <option value="pickup">Retrait</option>
+
+                  </select>
+
+                  <span class="form-error" id="mode-error"></span>
+                </div>
+
+                <div class="form-group full is-hidden" id="address-group">
+                  <label for="customer-address">
+                    Adresse ou quartier *
+                  </label>
+
+                  <input class="form-control"
+                    id="customer-address"
+                    name="address"
+                    type="text"
+                    autocomplete="street-address"
+                    placeholder="Votre quartier et une indication utile"
+                    maxlength="200">
+
+                  <span class="form-error" id="address-error"></span>
+                </div>
+
+                <div class="form-group full">
+                  <label for="order-note">
+                    Note complémentaire
+                    <span class="optional-label">(facultatif)</span>
+                  </label>
+
+                  <textarea class="form-control"
+                    id="order-note"
+                    name="note"
+                    maxlength="500"
+                    placeholder="Une précision concernant votre commande..."></textarea>
+                </div>
+
+              </div>
+
+              <p class="form-disclaimer">
+                Vos informations seront intégrées au message WhatsApp
+                que vous choisirez d'envoyer. Vérifiez les informations
+                avant de transmettre votre demande.
+              </p>
+
+              <button class="btn btn-primary order-submit"
+                type="submit"
+                id="order-submit">
+
+                <span class="material-symbols-rounded">chat</span>
+                Continuer sur WhatsApp
+
+              </button>
+
+              <div class="order-status"
+                id="order-status"
+                role="status"
+                aria-live="polite">
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         CONTACT
+    ================================================== -->
+
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Restons en contact</span>
+
+          <h2 class="section-title">
+            Un échange autour
+            <span class="text-accent">des mots.</span>
+          </h2>
+
+          <p class="section-description">
+            Une question sur le livre ou une demande particulière ?
+            Retrouvez l'auteur et contactez le responsable.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <article class="contact-card reveal">
+            <div class="contact-icon">
+              <span class="material-symbols-rounded">chat</span>
+            </div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+              Pour les commandes et les renseignements.
+            </p>
+
+            <a href="https://wa.me/243980399735"
+              target="_blank" rel="noopener noreferrer"
+              data-contact-whatsapp>
+              Contacter le responsable
+            </a>
+          </article>
+
+          <article class="contact-card reveal reveal-delay-1">
+            <div class="contact-icon">
+              <span class="material-symbols-rounded">public</span>
+            </div>
+
+            <h3>Facebook</h3>
+
+            <p>
+              Retrouvez les publications et actualités de l'auteur.
+            </p>
+
+            <a href="https://www.facebook.com/share/1GzFmYdVfm/?mibextid=wwXIfr"
+              target="_blank" rel="noopener noreferrer"
+              data-social="facebook">
+              Visiter le profil
+            </a>
+          </article>
+
+          <article class="contact-card reveal reveal-delay-2">
+            <div class="contact-icon">
+              <span class="material-symbols-rounded">play_circle</span>
+            </div>
+
+            <h3>TikTok</h3>
+
+            <p>
+              Découvrez l'univers de Mod’afia.
+            </p>
+
+            <a href="https://www.tiktok.com/@modeste.moke?_r=1&_t=ZS-9B9sTmY5BqA"
+              target="_blank" rel="noopener noreferrer"
+              data-social="tiktok">
+              Voir le profil
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================
+         CTA
+    ================================================== -->
+
+    <section class="cta-section">
+      <div class="container">
+
+        <div class="cta-content reveal">
+          <h2>Et si les mots racontaient aussi votre histoire ?</h2>
+
+          <p>
+            Découvrez un recueil où les émotions trouvent leur place
+            et où chaque souvenir peut devenir une source d'inspiration.
+          </p>
+
+          <div class="cta-actions">
+            <a href="#commande" class="btn btn-tertiary">
+              Commander le livre
+              <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+
+            <button type="button"
+              class="btn btn-secondary"
+              id="share-site">
+              <span class="material-symbols-rounded">share</span>
+              Partager le site
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================
+       FOOTER
+  ==================================================== -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-content">
+
+        <div class="footer-brand">
+          <a class="brand" href="#accueil">
+            <span class="brand-symbol">É</span>
+            <span class="brand-text">
+              <span class="brand-name">Échos d’un amour passé</span>
+              <span class="brand-caption">Mod’afia</span>
+            </span>
+          </a>
+
+          <p>
+            Une œuvre poétique qui explore les émotions humaines
+            à travers la force et la beauté des mots.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Navigation</h3>
+
+          <ul class="footer-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#livre">Le livre</a></li>
+            <li><a href="#themes">Univers</a></li>
+            <li><a href="#auteur">L'auteur</a></li>
+            <li><a href="#commande">Commander</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Réseaux & contact</h3>
+
+          <ul class="footer-links">
+            <li>
+              <a href="https://wa.me/243980399735"
+                target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/share/1GzFmYdVfm/?mibextid=wwXIfr"
+                target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.tiktok.com/@modeste.moke?_r=1&_t=ZS-9B9sTmY5BqA"
+                target="_blank" rel="noopener noreferrer">
+                TikTok
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="current-year"></span>
+          Échos d’un amour passé. Tous droits réservés.
+        </span>
+
+        <span class="footer-credit">
+          Réalisé par
+          <a href="https://alainsmubbanji.github.io/GO-Studio/"
+            target="_blank" rel="noopener noreferrer">
+            GO Studio LLC
+          </a>
+        </span>
+
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top"
+    type="button" aria-label="Retour en haut">
+    <span class="material-symbols-rounded">arrow_upward</span>
+  </button>
+
+  <div class="toast" id="toast"
+    role="status" aria-live="polite"></div>
+
+  <!-- ===================================================
+       JAVASCRIPT
+  ==================================================== -->
+
+  <script>
+    "use strict";
+
+    /* =================================================
+       01. CONFIGURATION
+    ================================================== */
+
+    const SITE_CONFIG = Object.freeze({
+      title: "Échos d’un amour passé",
+      author: "Modeste Moke",
+      penName: "Mod’afia",
+      whatsapp: "243980399735",
+      location: "Lubumbashi, RDC",
+      themeKey: "echos-amour-theme",
+      social: {
+        facebook:
+          "https://www.facebook.com/share/1GzFmYdVfm/?mibextid=wwXIfr",
+
+        tiktok:
+          "https://www.tiktok.com/@modeste.moke?_r=1&_t=ZS-9B9sTmY5BqA"
+      }
+    });
+
+    const $ = (selector, parent = document) =>
+      parent.querySelector(selector);
+
+    const $$ = (selector, parent = document) =>
+      [...parent.querySelectorAll(selector)];
+
+    /* =================================================
+       02. TOAST
+    ================================================== */
+
+    const Toast = (() => {
+      const element = $("#toast");
+      let timeout;
+
+      function show(message, duration = 3000) {
+        if (!element) return;
+
+        element.textContent = message;
+        element.classList.add("is-visible");
+
+        clearTimeout(timeout);
+
+        timeout = setTimeout(() => {
+          element.classList.remove("is-visible");
+        }, duration);
+      }
+
+      return { show };
+    })();
+
+    /* =================================================
+       03. THEME MANAGER
+    ================================================== */
+
+    const ThemeManager = (() => {
+      const root = document.documentElement;
+      const toggle = $("#theme-toggle");
+      const icon = $("#theme-icon");
+      const meta = $('meta[name="theme-color"]');
+
+      const media = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      );
+
+      function getPreferredTheme() {
+        try {
+          const saved = localStorage.getItem(
+            SITE_CONFIG.themeKey
+          );
+
+          if (saved === "dark" || saved === "light") {
+            return saved;
+          }
+        } catch (error) {
+          console.warn("Stockage du thème indisponible.");
+        }
+
+        return media.matches ? "dark" : "light";
+      }
+
+      function apply(theme, save = false) {
+        const dark = theme === "dark";
+
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+
+        if (icon) {
+          icon.textContent = dark ? "light_mode" : "dark_mode";
+        }
+
+        if (toggle) {
+          toggle.setAttribute(
+            "aria-label",
+            dark
+              ? "Activer le thème clair"
+              : "Activer le thème sombre"
+          );
+
+          toggle.setAttribute(
+            "aria-pressed",
+            String(dark)
+          );
+        }
+
+        if (meta) {
+          meta.setAttribute(
+            "content",
+            dark ? "#19171D" : "#F5F0E8"
+          );
+        }
+
+        if (save) {
+          try {
+            localStorage.setItem(
+              SITE_CONFIG.themeKey,
+              theme
+            );
+          } catch (error) {
+            console.warn("Impossible de sauvegarder le thème.");
+          }
+        }
+      }
+
+      function init() {
+        apply(getPreferredTheme());
+
+        toggle?.addEventListener("click", () => {
+          const next =
+            root.dataset.theme === "dark" ? "light" : "dark";
+
+          apply(next, true);
+        });
+
+        media.addEventListener("change", event => {
+          let saved = null;
+
+          try {
+            saved = localStorage.getItem(
+              SITE_CONFIG.themeKey
+            );
+          } catch (error) {}
+
+          if (!saved) {
+            apply(event.matches ? "dark" : "light");
+          }
+        });
+      }
+
+      return { init, apply };
+    })();
+
+    /* =================================================
+       04. NAVIGATION
+    ================================================== */
+
+    const Navigation = (() => {
+      const menu = $("#navigation-menu");
+      const toggle = $("#menu-toggle");
+      const icon = $("#menu-icon");
+      const links = $$(".nav-link");
+
+      function close() {
+        menu?.classList.remove("is-open");
+
+        toggle?.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        toggle?.setAttribute(
+          "aria-label",
+          "Ouvrir le menu"
+        );
+
+        if (icon) icon.textContent = "menu";
+      }
+
+      function open() {
+        menu?.classList.add("is-open");
+
+        toggle?.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+        toggle?.setAttribute(
+          "aria-label",
+          "Fermer le menu"
+        );
+
+        if (icon) icon.textContent = "close";
+      }
+
+      function init() {
+        toggle?.addEventListener("click", () => {
+          const isOpen =
+            menu?.classList.contains("is-open");
+
+          isOpen ? close() : open();
+        });
+
+        links.forEach(link => {
+          link.addEventListener("click", close);
+        });
+
+        document.addEventListener("click", event => {
+          if (
+            menu?.classList.contains("is-open") &&
+            !menu.contains(event.target) &&
+            !toggle?.contains(event.target)
+          ) {
+            close();
+          }
+        });
+
+        document.addEventListener("keydown", event => {
+          if (event.key === "Escape") close();
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 850) close();
+        });
+
+        const sections = $$("main section[id]");
+
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            entries => {
+              entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                links.forEach(link => {
+                  const active =
+                    link.getAttribute("href") ===
+                    "#" + entry.target.id;
+
+                  link.classList.toggle("active", active);
+                });
+              });
+            },
+            {
+              rootMargin: "-35% 0px -55% 0px"
+            }
+          );
+
+          sections.forEach(section => {
+            observer.observe(section);
+          });
+        }
+      }
+
+      return { init, close };
+    })();
+
+    /* =================================================
+       05. SMOOTH SCROLL
+    ================================================== */
+
+    function initializeSmoothScroll() {
+      $$('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", event => {
+          const targetId =
+            link.getAttribute("href");
+
+          if (!targetId || targetId === "#") return;
+
+          const target = $(targetId);
+
+          if (!target) return;
+
+          event.preventDefault();
+
+          target.scrollIntoView({
+            behavior: window.matchMedia(
+              "(prefers-reduced-motion: reduce)"
+            ).matches ? "auto" : "smooth",
+            block: "start"
+          });
+
+          if (history.replaceState) {
+            history.replaceState(null, "", targetId);
+          }
+        });
+      });
+    }
+
+    /* =================================================
+       06. REVEAL ANIMATIONS
+    ================================================== */
+
+    function initializeAnimations() {
+      const elements = $$(".reveal");
+
+      if (
+        !("IntersectionObserver" in window) ||
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        elements.forEach(element => {
+          element.classList.add("is-visible");
+        });
+
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, currentObserver) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("is-visible");
+            currentObserver.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -40px 0px"
+        }
+      );
+
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    }
+
+    /* =================================================
+       07. ORDER FORM
+    ================================================== */
+
+    const OrderManager = (() => {
+      const form = $("#order-form");
+
+      const fields = {
+        name: $("#customer-name"),
+        phone: $("#customer-phone"),
+        quantity: $("#quantity"),
+        mode: $("#reception-mode"),
+        address: $("#customer-address"),
+        note: $("#order-note")
+      };
+
+      const addressGroup = $("#address-group");
+      const status = $("#order-status");
+      const submit = $("#order-submit");
+
+      let isSubmitting = false;
+
+      function setError(field, message) {
+        const input = fields[field];
+        const error = $("#" + field + "-error");
+
+        input?.classList.toggle(
+          "is-invalid",
+          Boolean(message)
+        );
+
+        if (error) {
+          error.textContent = message || "";
+        }
+      }
+
+      function clearErrors() {
+        [
+          "name",
+          "phone",
+          "quantity",
+          "mode",
+          "address"
+        ].forEach(field => {
+          setError(field, "");
+        });
+
+        status?.classList.remove(
+          "is-visible",
+          "error",
+          "success"
+        );
+      }
+
+      function toggleAddress() {
+        const delivery =
+          fields.mode?.value === "delivery";
+
+        addressGroup?.classList.toggle(
+          "is-hidden",
+          !delivery
+        );
+
+        if (!delivery) {
+          fields.address.value = "";
+          setError("address", "");
+        }
+      }
+
+      function validate() {
+        clearErrors();
+
+        let valid = true;
+
+        const name = fields.name.value.trim();
+        const phone = fields.phone.value.trim();
+        const quantity = Number(fields.quantity.value);
+        const mode = fields.mode.value;
+        const address = fields.address.value.trim();
+
+        if (name.length < 2) {
+          setError("name", "Veuillez saisir votre nom complet.");
+          valid = false;
+        }
+
+        const phoneDigits = phone.replace(/\D/g, "");
+
+        if (phoneDigits.length < 8 || phoneDigits.length > 15) {
+          setError(
+            "phone",
+            "Veuillez vérifier votre numéro de téléphone."
+          );
+
+          valid = false;
+        }
+
+        if (
+          !Number.isInteger(quantity) ||
+          quantity < 1 ||
+          quantity > 50
+        ) {
+          setError(
+            "quantity",
+            "La quantité doit être comprise entre 1 et 50."
+          );
+
+          valid = false;
+        }
+
+        if (!["delivery", "pickup"].includes(mode)) {
+          setError(
+            "mode",
+            "Veuillez choisir un mode de réception."
+          );
+
+          valid = false;
+        }
+
+        if (mode === "delivery" && address.length < 3) {
+          setError(
+            "address",
+            "Veuillez préciser votre adresse ou votre quartier."
+          );
+
+          valid = false;
+        }
+
+        return valid;
+      }
+
+      function buildMessage() {
+        const mode =
+          fields.mode.value === "delivery"
+            ? "Livraison à domicile"
+            : "Retrait à un point à convenir";
+
+        const lines = [
+          "Bonjour, je souhaite passer une demande de commande.",
+          "",
+          "📚 *" + SITE_CONFIG.title + "*",
+          "",
+          "*Informations du client*",
+          "Nom : " + fields.name.value.trim(),
+          "Téléphone : " + fields.phone.value.trim(),
+          "Quantité : " + fields.quantity.value,
+          "Réception : " + mode
+        ];
+
+        if (fields.mode.value === "delivery") {
+          lines.push(
+            "Adresse / quartier : " +
+            fields.address.value.trim()
+          );
+        }
+
+        lines.push(
+          "",
+          "Prix : À confirmer",
+          "Lieu : " + SITE_CONFIG.location
+        );
+
+        const note = fields.note.value.trim();
+
+        if (note) {
+          lines.push("", "Note : " + note);
+        }
+
+        lines.push(
+          "",
+          "Merci de me communiquer le prix et les modalités de confirmation."
+        );
+
+        return lines.join("\n");
+      }
+
+      function showStatus(message, type) {
+        if (!status) return;
+
+        status.textContent = message;
+
+        status.className =
+          "order-status is-visible " + type;
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        if (isSubmitting) return;
+
+        if (!validate()) {
+          showStatus(
+            "Certains champs doivent être corrigés avant de continuer.",
+            "error"
+          );
+
+          const firstInvalid = $(".is-invalid", form);
+          firstInvalid?.focus();
+
+          return;
+        }
+
+        const message = buildMessage();
+
+        const url =
+          "https://wa.me/" +
+          SITE_CONFIG.whatsapp +
+          "?text=" +
+          encodeURIComponent(message);
+
+        /*
+          L'ouverture est déclenchée directement depuis
+          l'action de l'utilisateur afin de réduire le risque
+          de blocage par le navigateur.
+        */
+
+        isSubmitting = true;
+        submit.disabled = true;
+
+        const originalContent = submit.innerHTML;
+
+        submit.textContent = "Ouverture de WhatsApp...";
+
+        const opened = window.open(
+          url,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+        if (!opened) {
+          window.location.assign(url);
+          return;
+        }
+
+        showStatus(
+          "Votre message a été préparé dans WhatsApp. Vérifiez-le puis envoyez-le pour transmettre votre demande.",
+          "success"
+        );
+
+        submit.innerHTML = originalContent;
+        submit.disabled = false;
+        isSubmitting = false;
+      }
+
+      function init() {
+        if (!form) return;
+
+        fields.mode?.addEventListener(
+          "change",
+          toggleAddress
+        );
+
+        form.addEventListener(
+          "submit",
+          handleSubmit
+        );
+
+        Object.entries(fields).forEach(
+          ([key, input]) => {
+            input?.addEventListener("input", () => {
+              if (input.classList.contains("is-invalid")) {
+                setError(key, "");
+              }
+            });
+          }
+        );
+
+        toggleAddress();
+      }
+
+      return { init };
+    })();
+
+    /* =================================================
+       08. CONTACT / SHARE
+    ================================================== */
+
+    const ContactManager = (() => {
+      const shareButton = $("#share-site");
+
+      async function shareSite() {
+        const shareData = {
+          title: SITE_CONFIG.title,
+          text:
+            "Découvrez Échos d’un amour passé, " +
+            "un recueil poétique de Mod’afia.",
+          url: window.location.href
+        };
+
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+            return;
+          }
+
+          if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(
+              window.location.href
+            );
+
+            Toast.show("Lien du site copié.");
+            return;
+          }
+
+          Toast.show(
+            "Le partage n'est pas disponible sur ce navigateur."
+          );
+
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            Toast.show("Impossible de partager le site.");
+          }
+        }
+      }
+
+      function init() {
+        shareButton?.addEventListener(
+          "click",
+          shareSite
+        );
+      }
+
+      return { init };
+    })();
+
+    /* =================================================
+       09. BACK TO TOP
+    ================================================== */
+
+    function initializeBackToTop() {
+      const button = $("#back-to-top");
+
+      if (!button) return;
+
+      function update() {
+        button.classList.toggle(
+          "is-visible",
+          window.scrollY > 450
+        );
+      }
+
+      window.addEventListener(
+        "scroll",
+        update,
+        { passive: true }
+      );
+
+      button.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches ? "auto" : "smooth"
+        });
+      });
+
+      update();
+    }
+
+    /* =================================================
+       10. EXTERNAL LINKS
+    ================================================== */
+
+    function secureExternalLinks() {
+      $$('a[target="_blank"]').forEach(link => {
+        const rel = new Set(
+          (link.getAttribute("rel") || "").split(/\s+/)
+        );
+
+        rel.add("noopener");
+        rel.add("noreferrer");
+
+        link.setAttribute(
+          "rel",
+          [...rel].join(" ")
+        );
+      });
+    }
+
+    /* =================================================
+       11. FOOTER YEAR
+    ================================================== */
+
+    function initializeFooter() {
+      const year = $("#current-year");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    }
+
+    /* =================================================
+       12. APPLICATION INITIALIZATION
+    ================================================== */
+
+    function initializeApplication() {
+      ThemeManager.init();
+      Navigation.init();
+
+      initializeSmoothScroll();
+      initializeAnimations();
+
+      OrderManager.init();
+      ContactManager.init();
+
+      initializeBackToTop();
+      secureExternalLinks();
+      initializeFooter();
+
+      document.documentElement.classList.add(
+        "page-ready"
+      );
+
+      console.info(
+        "Échos d’un amour passé — Site initialisé."
+      );
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener(
+        "DOMContentLoaded",
+        initializeApplication,
+        { once: true }
+      );
+    } else {
+      initializeApplication();
+    }
+  </script>
+
+</body>
+</html>
